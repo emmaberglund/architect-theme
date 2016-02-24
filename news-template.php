@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Behandlingar
+Template Name: Nyheter
 */
 get_header();
 

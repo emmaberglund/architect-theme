@@ -17,40 +17,39 @@ else :
 endif;
 
 ?>
-
+<?php
+$pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_column' => 'menu_order'));
+?>
 <div class="container">
-    <div class="row">
-        <div class="three columns offer">
-            <?php dynamic_sidebar('ContentOffer1'); ?>
-        </div>
-        <div class="three columns offer">
-            <?php dynamic_sidebar('ContentOffer2'); ?>
-        </div>
-        <div class="three columns offer">
-            <?php dynamic_sidebar('ContentOffer3'); ?>
-        </div>
-        <div class="three columns offer">
-            <?php dynamic_sidebar('ContentOffer4'); ?>
-        </div>
-    </div>
+    <div class="news-container">
+        <?php
+        //replace post_parent value with your portfolio page id:
+        $args=array(
+            'post_type' => 'page',
+            'post_parent' => 8,
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+            'caller_get_posts'=> 1
+        );
+        $my_query = null;
+        $my_query = new WP_Query($args);
+        //echo "<pre>"; print_r($my_query); echo "</pre>";
+        if( $my_query->have_posts() ) {
+            echo''; // Här kan man skriva en rubrik
+            while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                    <div class="three columns news">
+                        <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+                        <?php
+                        global $more; $more = false;
+                        ?>
+                        <?php the_content('Read on....');?>
+                    </div>
+             <?php
+            endwhile;
 
-    <div class="row">
-        <div class="twelve columns introduction">
-            <?php dynamic_sidebar('IntroductionFrontPage'); ?>
-        </div>
+        }
+        wp_reset_query();  // Restore global post data stomped by the_post().
+        ?>
     </div>
-
-    <div class="row">
-        <div class="twelve columns instagram">
-            <?php dynamic_sidebar('Instagram'); ?>
-        </div>
-        <div class="twelve columns social-media">
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram-icon-green.png" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/images/instagram-icon-black.png'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/images/instagram-icon-green.png'" class="icons" alt="instagramIcon"></a>
-
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook-icon-green.png" onmouseover="this.src='<?php echo get_template_directory_uri(); ?>/images/facebook-icon-black.png'" onmouseout="this.src='<?php echo get_template_directory_uri(); ?>/images/facebook-icon-green.png'" class="icons" alt="facebookIcon"></a>
-        </div>
-    </div>
-
-        </div>
-    </div>
+</div>
 <?php get_footer(); ?>
