@@ -7,17 +7,42 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
     $(window).scroll(function() {
         if ($(this).scrollTop() == 0) {
             $('#header').css({
+                    'position': 'fixed',
                     'background-color': 'black',
-                    'box-shadow': 'none',
-                    '-moz-box-shadow' : 'none',
-                    '-webkit-box-shadow' : 'none' });
+                    'width': '80%',
+                    'left': '10%',
+                    'margin-top': '40px',
+                    'padding': '20px 0',
+                    'transition': 'background 1s',
+                    'transition': 'margin-top 0.5s' 
+
+                 });
+                 $('#header #desktop-menu ul').css({
+                     'top':'23px'
+                 });
+                 $('#header #show-menu').css({
+                     'top':'50px'
+                 });
         }
         else {
             $('#header').css({
                     'background-color': 'rgba(0, 0, 0, 0.66)',
+                    'position': 'fixed',
+                    'width': '100%',
+                    'left': '0',
+                    'margin-top': '0',
+                    'padding': '0',
+                    'transition': 'background 1s'
+                    //'transition': 'margin-top 0.5s'
                     //'box-shadow': '0px 10px 10px #888',
                     //'-moz-box-shadow' : '0px 10px 10px #888',
                     //'-webkit-box-shadow' : '0px 10px 10px #888'
+                });
+                $('#header #desktop-menu #menu-primary').css({
+                    'top':'0'
+                });
+                $('#header #show-menu').css({
+                    'top':'30px'
                 });
         }
     });

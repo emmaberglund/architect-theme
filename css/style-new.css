@@ -36,7 +36,7 @@ h2.header-text {
   z-index: -1; }
 
 .header-image {
-  height: 281px;
+  height: 571px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -58,9 +58,13 @@ body, html {
 
 header {
   position: fixed;
-  width: 100%;
+  width: 80%;
+  left: 10%;
+  margin-top: 40px;
   background: black;
-  z-index: 2; }
+  transition: background 1s;
+  z-index: 2;
+  padding: 20px 0; }
   header #desktop-menu {
     display: none; }
   header #logo {
@@ -77,10 +81,11 @@ header {
     z-index: 2;
     display: inline-block; }
   header h1 {
-    text-align: left; }
+    text-align: left;
+    padding-left: 26px; }
 
 #show-menu {
-  top: 30px;
+  top: 50px;
   right: 22px;
   position: absolute; }
 
@@ -141,7 +146,7 @@ header {
 /* Larger than tablet */
 @media (min-width: 750px) {
   .header-image {
-    height: 450px; }
+    height: 580px; }
   #show-menu {
     display: none; }
   header #desktop-menu {
@@ -151,7 +156,7 @@ header {
     header #desktop-menu ul {
       position: absolute;
       right: 20px;
-      top: 5px; }
+      top: 23px; }
       header #desktop-menu ul li {
         font-family: lato, sans-serif;
         text-transform: uppercase;
@@ -174,7 +179,7 @@ header {
 /* Larger than desktop */
 @media (min-width: 1025px) {
   .header-image {
-    height: 580px; }
+    height: 650px; }
     .header-image h3 {
       font-family: OpenSans;
       text-transform: none;
