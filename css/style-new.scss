@@ -135,7 +135,7 @@ h2.header-text{
 }
 
 .header-image{
-  height: 281px;
+  height: 571px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -162,10 +162,14 @@ body, html{
 
 header {
     position: fixed;
-    width: 100%;
+    width: 80%;
+    left: 10%;
+    margin-top: 40px;
     //background: rgba(0, 0, 0, 0.66);
     background: black;
+    transition: background 1s;
     z-index: 2;
+    padding: 20px 0;
     #desktop-menu{
         display: none;
     }
@@ -187,13 +191,14 @@ header {
     }
     h1 {
         text-align: left;
+        padding-left: 26px;
     }
 }
 
 
 
 #show-menu{
-    top: 30px;
+    top: 50px;
     right: 22px;
     position: absolute;
 }
@@ -722,7 +727,7 @@ header {
         padding-top:100px;
     }
     .header-image{
-        height: 450px;
+        height: 580px;
     }
     .services{
         //max-width: 1200px;
@@ -749,7 +754,7 @@ header {
             ul{
                 position: absolute;
                 right: 20px;
-                top: 5px;
+                top: 23px;
                 li{
                     font-family: lato, sans-serif;
                     text-transform: uppercase;
@@ -784,7 +789,7 @@ header {
 /* Larger than desktop */
 @media (min-width: 1025px) {
     .header-image{
-        height: 580px;
+        height: 650px;
         h3{
             font-family: OpenSans;
             text-transform: none;
