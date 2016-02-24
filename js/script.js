@@ -14,7 +14,7 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
                     'margin-top': '40px',
                     'padding': '20px 0',
                     'transition': 'background 1s',
-                    'transition': 'margin-top 0.5s' 
+                    'transition': 'margin-top 0.5s'
 
                  });
                  $('#header #desktop-menu ul').css({
@@ -38,7 +38,7 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
                     //'-moz-box-shadow' : '0px 10px 10px #888',
                     //'-webkit-box-shadow' : '0px 10px 10px #888'
                 });
-                $('#header #desktop-menu #menu-primary').css({
+                $('#header #desktop-menu ul').css({
                     'top':'0'
                 });
                 $('#header #show-menu').css({
