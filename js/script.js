@@ -38,7 +38,7 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
                     //'-moz-box-shadow' : '0px 10px 10px #888',
                     //'-webkit-box-shadow' : '0px 10px 10px #888'
                 });
-                $('#header #desktop-menu #menu-primary').css({
+                $('#header #desktop-menu ul').css({
                     'top':'0'
                 });
                 $('#header #show-menu').css({
@@ -51,4 +51,11 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
         $("#menu ul").toggle(500);
     });
 
+    $(document).ready(function () {
+        $(document).on('mouseenter', '.news', function () {
+            $(this).find(":button").fadeIn();
+        }).on('mouseleave', '.news', function () {
+            $(this).find(":button").fadeOut();
+        });
+    });
 });
