@@ -51,4 +51,11 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
         $("#menu ul").toggle(500);
     });
 
+    $(document).ready(function () {
+        $(document).on('mouseenter', '.news', function () {
+            $(this).find(":button").fadeIn();
+        }).on('mouseleave', '.news', function () {
+            $(this).find(":button").fadeOut();
+        });
+    });
 });

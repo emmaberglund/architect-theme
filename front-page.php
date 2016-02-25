@@ -6,7 +6,7 @@
 
 <?php global $post; ?>
 <div class="header-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'header')[0]; ?>);">
-    <h3><?php the_content();?></h3>
+
 </div>
 <?php
     endwhile;
@@ -37,12 +37,19 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         if( $my_query->have_posts() ) {
             echo''; // Här kan man skriva en rubrik
             while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                    <div class="three columns news">
+                    <div class="three columns news" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page->ID), 'large')[0]; ?>);">
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M0,0C0,0,0,180,0,180C0,180,90,130,90,130C90,130,180,180,180,180C180,180,180,0,180,0C180,0,0,0,0,0" style="fill:#ffffff"></path>
+                            <path d="M0,0C0,0,0,50,0,50C0,50,90,70,90,70C90,70,180,50,180,50C180,50,180,0,180,0C180,0,0,0,0,0" style="fill:#ffffff"></path>
+                            <desc>Created with Snap</desc><defs></defs></svg>
+                        <div class="fig">
                         <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
                         <?php
                         global $more; $more = false;
                         ?>
                         <?php the_content('Read on....');?>
+                            <button class="view-button">Läs mer</button>
+                    </div>
                     </div>
              <?php
             endwhile;
