@@ -14,7 +14,7 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
                     'margin-top': '40px',
                     'padding': '20px 0',
                     'transition': 'background 1s',
-                    'transition': 'margin-top 0.5s' 
+                    'transition': 'margin-top 0.5s'
 
                  });
                  $('#header #desktop-menu ul').css({

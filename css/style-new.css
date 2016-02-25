@@ -223,8 +223,16 @@ header {
         border-bottom: none; }
         header #desktop-menu ul li a {
           color: #fff; }
-          header #desktop-menu ul li a:hover {
-            color: pink; }
+          header #desktop-menu ul li a:hover::after {
+            content: "";
+            display: block;
+            bottom: 24px;
+            height: 1px;
+            width: 100%;
+            background-color: white;
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=78);
+            opacity: 0.78;
+            transition: background-color 1s; }
   .show-menu {
     display: none; }
   .three.columns {

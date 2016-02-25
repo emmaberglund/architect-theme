@@ -300,12 +300,29 @@ header {
                     padding: 27px 13px;
                     margin-bottom: 0;
                     border-bottom: none;
+                    &:hover{
+
+                    }
                     a{
                         color: $text-color;;
                         &:hover{
-                            color:pink;
+                        
+                            &::after {
+                                content: "";
+                                display: block;
+                                bottom: 24px;
+                                height: 1px;
+                                width: 100%;
+                                background-color: white;
+                                filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=78);
+                                opacity: 0.78;
+
+                                transition: background-color 1s;
+                            }
                         }
+
                     }
+
 
                 }
             }
@@ -392,5 +409,4 @@ header {
     }
   }
 }
-
 
