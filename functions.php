@@ -56,26 +56,6 @@ function our_widgets_init(){
         'id' => 'contactmap'
     ]);
     register_sidebar([
-        'name' => 'ContentOffer1',
-        'id' => 'contentoffer1',
-        'class' => 'content-offers'
-    ]);
-    register_sidebar([
-        'name' => 'ContentOffer2',
-        'id' => 'contentoffer2',
-        'class' => 'content-offers'
-    ]);
-    register_sidebar([
-        'name' => 'ContentOffer3',
-        'id' => 'contentoffer3',
-        'class' => 'content-offers'
-    ]);
-    register_sidebar([
-        'name' => 'ContentOffer4',
-        'id' => 'contentoffer4',
-        'class' => 'content-offers'
-    ]);
-    register_sidebar([
         'name' => 'IntroductionFrontPage',
         'id' => 'introductionfrontpage',
         'class' => 'introduction'
@@ -94,16 +74,6 @@ function our_widgets_init(){
         'name' => 'Contact 2',
         'id' => 'contact2',
         'class' => 'contact2'
-    ]);
-    register_sidebar([
-        'name' => 'Our Workers',
-        'id' => 'ourworkers',
-        'class' => 'ourworkers'
-    ]);
-    register_sidebar([
-        'name' => 'About Pictures',
-        'id' => 'aboutpictures',
-        'class' => 'aboutpictures'
     ]);
 
 

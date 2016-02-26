@@ -73,7 +73,7 @@ header {
     background-size: cover;
     margin-top: 5px;
     margin-left: 20px;
-    width: 200px;
+    width: 225px;
     height: 79px;
     margin-bottom: 5px;
     transition: opacity 1s;
@@ -126,7 +126,7 @@ header {
         -o-transition: all 0.2s;
         transition: all 0.2s; }
 
-/* ---- Front Page NEWS -------*/
+/* ---- NEWS -------*/
 .news {
   position: relative;
   display: block;
@@ -155,17 +155,17 @@ header {
     font-size: 21px;
     text-align: center; }
 
-.fig {
+.caption {
   position: absolute;
   top: 0;
   z-index: 11;
   width: 100%;
   height: 100%;
   text-align: center; }
-  .fig p {
+  .caption p {
     text-align: center;
     margin-bottom: 0px; }
-  .fig .view-button {
+  .caption .view-button {
     margin-top: 110px;
     background: rgba(255, 255, 255, 0.6);
     color: black;
@@ -181,20 +181,70 @@ header {
     width: 101%;
     height: 101%; }
 
-/* ---- End Front Page NEWS -------*/
+/* ---- End NEWS -------*/
+/* ---- PROJECTS -------*/
+.projects-container {
+  width: 90%;
+  display: block;
+  margin: auto; }
+  .projects-container p {
+    text-align: center;
+    color: black;
+    font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px; }
+    .projects-container p a {
+      color: black;
+      font-family: OpenSans, sans-serif;
+      font-size: 21px;
+      text-align: center; }
+
+.project {
+  margin-top: 20px;
+  margin-left: 0px;
+  padding: 0px 25px; }
+
+.project-icon img {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px; }
+
+/* ---- END PROJECTS -------*/
+/* ---- TEXT-DIVIDER -------*/
+.text-divider {
+  color: black;
+  font-family: OpenSans, sans-serif;
+  font-size: 16px;
+  background-color: #4E82B9;
+  margin-top: 70px;
+  padding: 20px 40px 20px 40px; }
+  .text-divider p {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: center; }
+  .text-divider h2 {
+    font-size: 2em; }
+
+/* ---- END TEXT-DIVIDER -------*/
 /*MEDIA QUERIES */
 /* Larger than mobile */
 /* Tablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  .three.columns.news {
+  .three.columns.news,
+  .three.columns.project {
     width: 50%; }
-    .three.columns.news:first-child {
+    .three.columns.news:first-child,
+    .three.columns.project:first-child {
       border-right: 4px solid white; }
-    .three.columns.news:nth-child(2) {
+    .three.columns.news:nth-child(2),
+    .three.columns.project:nth-child(2) {
       border-left: 4px solid white; }
-    .three.columns.news:nth-child(3) {
+    .three.columns.news:nth-child(3),
+    .three.columns.project:nth-child(3) {
       border-right: 4px solid white; }
-    .three.columns.news:nth-child(4) {
+    .three.columns.news:nth-child(4),
+    .three.columns.project:nth-child(4) {
       border-left: 4px solid white; } }
 
 /* Larger than tablet */
@@ -236,7 +286,9 @@ header {
   .show-menu {
     display: none; }
   .three.columns {
-    width: 25%; } }
+    width: 25%; }
+  .project {
+    width: 50%; } }
 
 /* Larger than desktop */
 @media (min-width: 1025px) {
@@ -259,7 +311,8 @@ header {
       .header-image h3 p {
         color: white;
         margin-bottom: 0; }
-  .three.columns.news {
+  .three.columns.news,
+  .three.columns.project {
     width: 25%; }
   .news-container {
     width: 90%;
@@ -284,4 +337,6 @@ header {
     border: 1px solid black;
     transition: all ease-in-out; }
     .view-button:hover {
-      border: 1px solid black; } }
+      border: 1px solid black; }
+  .project {
+    margin-top: 70px; } }
