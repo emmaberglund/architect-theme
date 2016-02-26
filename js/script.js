@@ -14,7 +14,8 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
                     'margin-top': '40px',
                     'padding': '20px 0',
                     'transition': 'background 1s',
-                    'transition': 'margin-top 0.5s'
+                    'transition': 'margin-top 0.5s',
+                    'z-index': '5'
 
                  });
                  $('#header #desktop-menu ul').css({
@@ -32,7 +33,8 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
                     'left': '0',
                     'margin-top': '0',
                     'padding': '0',
-                    'transition': 'background 1s'
+                    'transition': 'background 1s',
+                    'z-index': '5'
                     //'transition': 'margin-top 0.5s'
                     //'box-shadow': '0px 10px 10px #888',
                     //'-moz-box-shadow' : '0px 10px 10px #888',
