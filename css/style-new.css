@@ -250,8 +250,9 @@ footer {
       color: #bdbdbd; }
     footer .footer .social img {
       height: 50px;
-      width: 50px;
-      padding-left: 10px; }
+      width: 50px; }
+      footer .footer .social img:first-child {
+        padding-right: 10px; }
       footer .footer .social img:hover {
         opacity: 0.6; }
   footer .copy p {
@@ -336,7 +337,9 @@ footer {
   .show-menu {
     display: none; }
   .three.columns {
-    width: 25%; } }
+    width: 25%; }
+  footer .footer {
+    padding: 10% 10%; } }
 
 /* Larger than desktop */
 @media (min-width: 1025px) {
