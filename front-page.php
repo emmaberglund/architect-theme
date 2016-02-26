@@ -80,6 +80,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                     <?php
                     $count=1;
                     foreach ($cases_children as $case) {
+                        if($count <= 8){
                         ?>
 
 
@@ -95,9 +96,23 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                         ?>
             </div>
                   <div class="row">
-                      <?php }
+                      <?php } 
+
+
                       $count++;
                   }
+                  else{
+                      ?>
+                      <div class="case-item small">
+                          <div class="case-overlay"></div>
+                          <div class="case-img" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($case->ID), 'medium')[0]; ?>);" >
+                          </div>
+                          <!--<h2 class="case-title"><?php //echo $case->post_title; ?></h2>-->
+
+                      </div>
+
+                  <?php }
+              }
                   wp_reset_query();
                   ?>
                 </div>
