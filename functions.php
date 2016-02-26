@@ -81,9 +81,9 @@ function our_widgets_init(){
         'class' => 'introduction'
     ]);
     register_sidebar([
-        'name' => 'Instagram',
-        'id' => 'instagram',
-        'class' => 'instagram'
+        'name' => 'Social Media',
+        'id' => 'social',
+        'class' => 'social'
     ]);
     register_sidebar([
         'name' => 'Contact 1',

@@ -300,6 +300,39 @@ header {
     }
 }
 }
+
+footer{
+    text-align: center;
+    font-family: OpenSans, sans-serif;
+    font-size: 1.1em;
+    li{
+        list-style: none;
+    }
+    .footer{
+        background-color: black;
+        color: white;
+        padding: 10% 10% 5%;
+        p, a{
+            color: white;
+        }
+        a:hover{
+            color:rgb(189, 189, 189);
+        }
+        .social img{
+            height:50px;
+            width: 50px;
+            padding-left: 10px;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+    .copy p{
+        margin: 0;
+    }
+}
+
+
 /* ---- End Front Page CASES ---- */
 
 
