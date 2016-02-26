@@ -376,8 +376,13 @@ footer{
             }
         }
     }
-    .copy p{
-        margin: 0;
+    .copy{
+        p{
+            margin: 0;
+        }
+        .footer-menu{
+            display:none;
+        }
     }
 }
 
@@ -532,6 +537,35 @@ footer{
     .footer{
         padding: 10% 10%;
     }
+    .copy{
+        a{
+            color: white;
+            &:hover{
+                color: #bdbdbd;
+            }
+        }
+        p{
+            float: right;
+            color: white;
+        }
+        font-size: 0.9em;
+        padding: 0 10px;
+        background: rgb(0, 0, 0);
+        border-top: 1px solid rgba(255, 255, 255, 0.36);
+        .footer-menu{
+            text-align: left;
+            display: block;
+            ul{
+                margin-bottom: 0;
+                li{
+                    display: inline;
+                    padding-right: 10px;
+
+                }
+            }
+        }
+    }
+
 }
 
 }

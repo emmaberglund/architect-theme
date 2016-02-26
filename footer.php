@@ -16,10 +16,18 @@
         </div>
     </div>
 
-
-
     <div class="row copy">
-        <div class="twelve columns"><p class="copy">&copy; <?php bloginfo('author');?> <?php the_time('Y');?></p></div>
+        <div class="twelve columns">
+            <p>&copy; <?php bloginfo('author');?> <?php the_time('Y');?></p>
+            <nav class="footer-menu">
+                <?php wp_nav_menu([
+                    'theme_location' => 'footer'
+
+
+                ]); ?>
+            </nav>
+
+        </div>
     </div>
 
 
@@ -29,11 +37,7 @@
 
 
 
-<?php wp_footer([
-    'theme_location' => 'footer'
 
-
-]); ?>
-
+     <?php wp_footer(); ?>
     </body>
 </html>

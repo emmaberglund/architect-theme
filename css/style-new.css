@@ -302,6 +302,8 @@ footer {
         opacity: 0.6; }
   footer .copy p {
     margin: 0; }
+  footer .copy .footer-menu {
+    display: none; }
 
 /* ---- End Front Page CASES ---- */
 /*MEDIA QUERIES */
@@ -391,7 +393,27 @@ footer {
   .project {
     width: 50%; }
   footer .footer {
-    padding: 10% 10%; } }
+    padding: 10% 10%; }
+  footer .copy {
+    font-size: 0.9em;
+    padding: 0 10px;
+    background: black;
+    border-top: 1px solid rgba(255, 255, 255, 0.36); }
+    footer .copy a {
+      color: white; }
+      footer .copy a:hover {
+        color: #bdbdbd; }
+    footer .copy p {
+      float: right;
+      color: white; }
+    footer .copy .footer-menu {
+      text-align: left;
+      display: block; }
+      footer .copy .footer-menu ul {
+        margin-bottom: 0; }
+        footer .copy .footer-menu ul li {
+          display: inline;
+          padding-right: 10px; } }
 
 /* Larger than desktop */
 @media (min-width: 1025px) {
