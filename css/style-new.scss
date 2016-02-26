@@ -114,7 +114,7 @@ header {
         margin-top: 5px;
         margin-left: 20px;
         //width: 165px;
-        width: 200px;
+        width: 225px;
         //height: 63px;
         height: 79px;
         margin-bottom: 5px;
@@ -182,7 +182,7 @@ header {
     }
 }
 
-/* ---- Front Page NEWS -------*/
+/* ---- NEWS -------*/
 
 .news{
   position: relative;
@@ -210,7 +210,7 @@ header {
   }
 }
 
-.fig{
+.caption{
   position: absolute;
   top: 0;
   z-index: 11;
@@ -239,7 +239,54 @@ header {
     height: 101%;
   }
 }
-/* ---- End Front Page NEWS -------*/
+/* ---- End NEWS -------*/
+
+/* ---- PROJECTS -------*/
+.projects-container {
+  width: 90%;
+  display: block;
+  margin: auto;
+  p{
+    text-align: center;
+    @include p-text;
+    margin-bottom: 5px;
+    a{
+      @include p-header-text;
+    }
+  }
+}
+.project{
+  margin-top: 20px;
+  margin-left: 0px;
+  padding:0px 25px;
+}
+.project-icon{
+  img {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    padding:10px;
+  }
+}
+/* ---- END PROJECTS -------*/
+
+/* ---- TEXT-DIVIDER -------*/
+.text-divider{
+  @include p-text;
+  background-color: #4E82B9;
+  margin-top: 70px;
+  padding: 20px 40px 20px 40px;
+  p{
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: center;
+  }
+  h2{
+    font-size: 2em;
+  }
+}
+/* ---- END TEXT-DIVIDER -------*/
+
 
 /* ---- Front Page CASES ---- */
 .cases-container{
@@ -350,7 +397,9 @@ footer{
 
 /* Tablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  .three.columns.news{
+  .three.columns.news,
+  .three.columns.project
+  {
     width: 50%;
     &:first-child{
       border-right: 4px solid white;
@@ -474,6 +523,9 @@ footer{
   .three.columns{
     width: 25%;
   }
+  .project{
+    width: 50%;
+  }
 
 
 footer{
@@ -509,7 +561,8 @@ footer{
         }
     }
 
-  .three.columns.news{
+  .three.columns.news,
+  .three.columns.project{
     width: 25%;
   }
   .news-container{
@@ -555,4 +608,9 @@ footer{
       border: 1px solid black;
     }
   }
+
+  .project{
+    margin-top: 70px;
+  }
+
 }

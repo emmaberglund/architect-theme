@@ -42,7 +42,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                             <path d="M0,0C0,0,0,180,0,180C0,180,90,130,90,130C90,130,180,180,180,180C180,180,180,0,180,0C180,0,0,0,0,0" style="fill:#ffffff"></path>
                             <path d="M0,0C0,0,0,50,0,50C0,50,90,70,90,70C90,70,180,50,180,50C180,50,180,0,180,0C180,0,0,0,0,0" style="fill:#ffffff"></path>
                             <desc>Created with Snap</desc><defs></defs></svg>
-                        <div class="fig">
+                        <div class="caption">
                         <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
                         <?php
                         global $more; $more = false;
@@ -59,6 +59,42 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         ?>
     </div>
 
+    <div class="twelve columns text-divider">
+        <p><?php the_content();?></p>
+    </div>
+
+    <div class="projects-container">
+        <?php
+        //replace post_parent value with your portfolio page id:
+        $args=array(
+            'post_type' => 'page',
+            'post_parent' => 12,
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+            'caller_get_posts'=> 1
+        );
+        $my_query = null;
+        $my_query = new WP_Query($args);
+        //echo "<pre>"; print_r($my_query); echo "</pre>";
+        if( $my_query->have_posts() ) {
+            echo''; // Här kan man skriva en rubrik
+            while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                <div class="three columns project">
+                    <div class="project-icon">
+                        <?php echo get_the_post_thumbnail( $page->ID, array(60, 60)  ); ?>
+                    </div>
+                            <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+                            <?php
+                            global $more; $more = false;
+                            ?>
+                            <?php the_content('Read on....');?>
+                </div>
+                <?php
+                endwhile;
+
+            }
+            wp_reset_query();  // Restore global post data stomped by the_post().
+            ?>
 
         <?php
         // Set up the objects needed

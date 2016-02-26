@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Om
+Template Name: Projekt
 */
 get_header();
 
@@ -14,10 +14,10 @@ if(have_posts()) :
 
         ?>
         <main>
-            <div class="container">
+            <div class="container services">
                 <div class="row below-header">
                     <div class="twelve columns">
-                        <h3><?php the_content();?></h3>
+                        <h2 class="header-text"><?php the_content();?></h2>
                     </div>
                 </div>
 
@@ -33,9 +33,10 @@ if(have_posts()) :
                     ?>
 
 
-                    <div class="workers four columns">
-                        <?php echo get_the_post_thumbnail( $page->ID, array(200, 200)  ); ?>
-                        <h3><?php echo $page->post_title; ?></h3>
+                    <div class="service four columns">
+                        <div class ="service-img" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page->ID), 'medium')[0]; ?>);">
+                        </div>
+                        <h2><?php echo $page->post_title; ?></h2>
                         <p><?php echo $page->post_content; ?></p>
                     </div>
 
