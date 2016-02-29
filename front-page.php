@@ -95,6 +95,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             }
             wp_reset_query();  // Restore global post data stomped by the_post().
             ?>
+        </div>
 
         <?php
         // Set up the objects needed
