@@ -67,7 +67,7 @@ h2.header-text{
 }
 
 .header-image{
-  height: 720px;
+  height: 571px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -75,6 +75,17 @@ h2.header-text{
   background-position: center center;
   background-size: cover;
   margin-bottom: 20px;
+
+}
+
+.header-image-page{
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    background-position: center center;
+    background-size: cover;
 
 }
 
@@ -274,12 +285,14 @@ header {
 .text-divider{
   @include p-text;
   background-color: #4E82B9;
-  margin-top: 70px;
   padding: 20px 40px 20px 40px;
   p{
-    margin-bottom: 1em;
-    margin-top: 1em;
-    text-align: center;
+
+      margin-bottom: 1em;
+      margin-top: 1em;
+      text-align: center;
+      color: #EAEAEA;
+      font-size: 1.3em;
   }
   h2{
     font-size: 2em;
@@ -357,6 +370,7 @@ footer{
     font-size: 1.1em;
     li{
         list-style: none;
+        margin-bottom: 0;
     }
     .footer{
         background-color: black;
@@ -471,7 +485,7 @@ footer{
 @media (min-width: 750px) {
 
     .header-image{
-        height: 580px;
+        height: 720px;
     }
 
     #show-menu{
@@ -538,7 +552,7 @@ footer{
 
 footer{
     .footer{
-        padding: 10% 10%;
+        padding: 10% 10% 8%;
     }
     .copy{
         a{
@@ -576,7 +590,7 @@ footer{
 /* Larger than desktop */
 @media (min-width: 1025px) {
     .header-image{
-        height: 650px;
+        height: 730px;
         h3{
             font-family: OpenSans;
             text-transform: none;

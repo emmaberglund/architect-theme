@@ -220,17 +220,21 @@ register_nav_menus([
     add_theme_support('post-thumbnails');
     add_image_size('small_thumbnail', 180, 120, true);
     add_image_size('banner_image', 960, 320, true);
-    add_image_size( 'header', 2000, 1500, true );
+
 
 // add new imagesize
 if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'new-size', 314, 314, true ); //(cropped)
+    add_image_size( 'header-image', 2500, 2000, true );
+    add_image_size( 'header-image-page', 2000, 500, true );
 
 }
 add_filter('image_size_names_choose', 'my_image_sizes');
 function my_image_sizes($sizes) {
     $addsizes = array(
-        "new-size" => __( "New Size")
+        "new-size" => __( "New Size"),
+        "header" => __("Header"),
+        "header-image-page" => __("Header Image Page")
     );
     $newsizes = array_merge($sizes, $addsizes);
     return $newsizes;
@@ -335,9 +339,5 @@ function tcx_customizer_css() {
 add_action( 'wp_head', 'tcx_customizer_css' );
 
 
-//fix for cookie error while login.
-setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
-if ( SITECOOKIEPATH != COOKIEPATH )
-	setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
 
 ?>

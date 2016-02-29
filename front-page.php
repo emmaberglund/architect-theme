@@ -5,7 +5,7 @@
         while (have_posts()) : the_post(); ?>
 
 <?php global $post; ?>
-<div class="header-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]; ?>);">
+<div class="header-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'header-image')[0]; ?>);">
 
 </div>
 <?php
@@ -42,10 +42,11 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
     <div class="news-container">
     <?php
         //echo "<pre>"; print_r($my_query); echo "</pre>";
-        if( $my_query->have_posts() ) {
-            echo''; // Här kan man skriva en rubrik
-            while ($my_query->have_posts()) : $my_query->the_post(); ?>
+        if( $my_query->have_posts() ) { ?>
             <div class="row">
+            <?php echo''; // Här kan man skriva en rubrik
+            while ($my_query->have_posts()) : $my_query->the_post(); ?>
+
                     <div class="three columns news" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page->ID), 'large')[0]; ?>);">
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none">
                             <path d="M0,0C0,0,0,180,0,180C0,180,90,130,90,130C90,130,180,180,180,180C180,180,180,0,180,0C180,0,0,0,0,0" style="fill:#ffffff"></path>
@@ -60,13 +61,14 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                             <button class="view-button">Läs mer</button>
                     </div>
                     </div>
-                </div>
+
              <?php
             endwhile;
 
         }
         wp_reset_query();  // Restore global post data stomped by the_post().
         ?>
+        </div>
     </div>
     <div class="row">
         <div class="twelve columns text-divider">
@@ -90,8 +92,11 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         //echo "<pre>"; print_r($my_query); echo "</pre>";
         if( $my_query->have_posts() ) {
             echo''; // Här kan man skriva en rubrik
+            ?>
+            <div class="row">
+            <?php
             while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                <div class="row">
+
                     <div class="three columns project">
                         <div class="project-icon">
                             <?php echo get_the_post_thumbnail( $page->ID, array(60, 60)  ); ?>
@@ -102,7 +107,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                                 ?>
                                 <?php the_content('Read on....');?>
                     </div>
-                </div>
+
 
                 <?php
                 endwhile;
@@ -110,6 +115,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             }
             wp_reset_query();  // Restore global post data stomped by the_post().
             ?>
+        </div>
         </div>
 
         <?php
@@ -153,17 +159,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
 
                       $count++;
                   }
-                  else{
-                      ?>
-                      <div class="case-item small">
-                          <div class="case-overlay"></div>
-                          <div class="case-img" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($case->ID), 'medium')[0]; ?>);" >
-                          </div>
-                          <!--<h2 class="case-title"><?php //echo $case->post_title; ?></h2>-->
 
-                      </div>
-
-                  <?php }
               }
                   wp_reset_query();
                   ?>
