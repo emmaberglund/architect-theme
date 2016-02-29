@@ -53,6 +53,18 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
         $("#menu ul").toggle(500);
     });
 
+    //Toggle workers-info
+    $('.toggle').click(function(){
+        $('.toggle').not(this).toggleClass('.block-over');
+        $(this).show(400);
+    });
+
+   /* $(".toggle").click(function () {
+        $(".effect").not(this).addClass('block-over');
+        $(this).toggleClass('block-over');
+
+    });
+*/
     $(document).ready(function () {
         $(document).on('mouseenter', '.news', function () {
             $(this).find(":button").fadeIn();
@@ -60,4 +72,15 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
             $(this).find(":button").fadeOut();
         });
     });
+
+    $(document).ready(function(){
+        $('#person').change(function(){
+            if(this.checked)
+                $('.block-over').fadeIn('slow');
+            else
+                $('.block-over').fadeOut('slow');
+
+        });
+    });
+
 });
