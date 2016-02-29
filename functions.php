@@ -95,6 +95,11 @@ function our_widgets_init(){
         'id' => 'aboutusteam',
         'class' => 'aboutusteam'
     ]);
+    register_sidebar([
+        'name' => 'Work with Us',
+        'id' => 'workwithus',
+        'class' => 'workwithus'
+    ]);
 
 }
 

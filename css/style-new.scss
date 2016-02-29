@@ -16,7 +16,7 @@
 $text-color: #fff;
 $background-color: #fff;
 $green : #86e9cb;
-$blue: #86e9e4;
+$blue: #4E82B9;
 $pink: #FFD1DC;
 $lightgreen : #97ffe0;
 
@@ -74,7 +74,6 @@ h2.header-text{
   z-index: -1;
   background-position: center center;
   background-size: cover;
-  margin-bottom: 20px;
 
 }
 
@@ -274,9 +273,15 @@ header {
 
   .text-divider {
     @include p-text;
-    background-color: #4E82B9;
-    margin-top: 70px;
-    padding: 20px 40px 20px 40px;
+    //background-color: #4E82B9;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px 40px 40px 40px;
+    li{
+      list-style: none;
+      a{
+        color: $blue;
+      }
+    }
     p {
       margin-bottom: 1em;
       margin-top: 1em;
@@ -290,7 +295,8 @@ header {
   }
 .text-divider2 {
   @include p-text;
-  background-color: #4E82B9;
+  //background-color: #4E82B9;
+  background: rgba(0, 0, 0, 0.9);
   padding: 20px 40px 20px 40px;
 
   p {
@@ -539,23 +545,19 @@ h2{
   }
 }
 .picture-divider{
-  height: 400px;
+  height: 350px;
   background-image: url("../images/header-image.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   padding: 40px 20px;
-  position: relative;
   text-align: center;
-  display: table;
-  overflow: hidden;
   p{
     @include p-header-text;
-    font-size: 3em;
+    font-size: 2em;
     color: white;
-    background-color: rgba(0, 0, 0, 0.47);
-    display: table-cell;
-    vertical-align: middle;
-    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.52);
+    margin-top: 80px;
   }
 }
 .icon{
@@ -564,6 +566,10 @@ h2{
   display: block;
   margin: auto;
   margin-bottom: 10px;
+}
+#header-image-about{
+  height: 350px;
+  background-attachment: fixed;
 }
 /* ---- End About page---- */
 
@@ -586,8 +592,10 @@ h2{
 
 /* Tablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+
   .four.columns.workers{
     width: 50%;
+    margin-bottom: 0px;
   }
   .three.columns.news,
   .three.columns.project

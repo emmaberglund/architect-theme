@@ -15,7 +15,8 @@ if(have_posts()) :
         ?>
         <main>
             <div class="container">
-                <div class="below-header">
+                <div class="header-image" id="header-image-about" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]; ?>);"></div>
+                <div class="">
                     <div class="row about text-divider">
                         <div class="six columns">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/gear.png" class="icon">
@@ -75,6 +76,11 @@ if(have_posts()) :
 
             </div>
         </main>
+        <div class="row">
+            <div class="twelve columns text-divider">
+                <?php dynamic_sidebar('Work with Us'); ?>
+            </div>
+        </div>
     <?php
     endwhile;
 

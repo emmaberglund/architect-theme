@@ -42,8 +42,7 @@ h2.header-text {
   position: relative;
   z-index: -1;
   background-position: center center;
-  background-size: cover;
-  margin-bottom: 20px; }
+  background-size: cover; }
 
 body {
   background-color: #fff;
@@ -217,9 +216,12 @@ header {
   color: black;
   font-family: OpenSans, sans-serif;
   font-size: 16px;
-  background-color: #4E82B9;
-  margin-top: 70px;
-  padding: 20px 40px 20px 40px; }
+  background: rgba(0, 0, 0, 0.9);
+  padding: 40px 40px 40px 40px; }
+  .text-divider li {
+    list-style: none; }
+    .text-divider li a {
+      color: #4E82B9; }
   .text-divider p {
     margin-bottom: 1em;
     margin-top: 1em;
@@ -233,7 +235,7 @@ header {
   color: black;
   font-family: OpenSans, sans-serif;
   font-size: 16px;
-  background-color: #4E82B9;
+  background: rgba(0, 0, 0, 0.9);
   padding: 20px 40px 20px 40px; }
   .text-divider2 p {
     margin-bottom: 1em;
@@ -442,26 +444,22 @@ h2{
     height: 50px; }
 
 .picture-divider {
-  height: 400px;
+  height: 350px;
   background-image: url("../images/header-image.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   padding: 40px 20px;
-  position: relative;
-  text-align: center;
-  display: table;
-  overflow: hidden; }
+  text-align: center; }
   .picture-divider p {
     color: black;
     font-family: OpenSans, sans-serif;
     font-size: 21px;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     color: white;
-    background-color: rgba(0, 0, 0, 0.47);
-    display: table-cell;
-    vertical-align: middle;
-    margin-top: 60px; }
+    background-color: rgba(0, 0, 0, 0.52);
+    margin-top: 80px; }
 
 .icon {
   width: 45px;
@@ -470,13 +468,18 @@ h2{
   margin: auto;
   margin-bottom: 10px; }
 
+#header-image-about {
+  height: 350px;
+  background-attachment: fixed; }
+
 /* ---- End About page---- */
 /*MEDIA QUERIES */
 /* Larger than mobile */
 /* Tablet (also point when grid becomes active) */
 @media (min-width: 550px) {
   .four.columns.workers {
-    width: 50%; }
+    width: 50%;
+    margin-bottom: 0px; }
   .three.columns.news,
   .three.columns.project {
     width: 50%; }
