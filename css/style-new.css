@@ -45,7 +45,7 @@ h2.header-text {
   background-size: cover; }
 
 .header-image-page {
-  height: 400px;
+  height: 300px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -541,6 +541,8 @@ footer {
     width: 50%; }
   .header-image {
     height: 720px; }
+  .header-image-page {
+    height: 400px; }
   #show-menu {
     display: none; }
   header #desktop-menu {
@@ -550,7 +552,7 @@ footer {
     header #desktop-menu ul {
       position: absolute;
       right: 20px;
-      top: 23px; }
+      top: 27px; }
       header #desktop-menu ul li {
         font-family: lato, sans-serif;
         text-transform: uppercase;
