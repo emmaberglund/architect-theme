@@ -5,7 +5,7 @@
         while (have_posts()) : the_post(); ?>
 
 <?php global $post; ?>
-<div class="header-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'header')[0]; ?>);">
+<div class="header-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]; ?>);">
 
 </div>
 <?php
@@ -132,7 +132,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                         ?>
             </div>
                   <div class="row">
-                      <?php } 
+                      <?php }
 
 
                       $count++;

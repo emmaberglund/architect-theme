@@ -36,12 +36,12 @@ function our_widgets_init(){
         'after_title' => '</h4>'
     ]);
     register_sidebar([
-        'name' => 'Footer1',
-        'id' => 'footer1'
+        'name' => 'Address',
+        'id' => 'address'
     ]);
     register_sidebar([
-        'name' => 'Footer2',
-        'id' => 'footer2'
+        'name' => 'Email and phone',
+        'id' => 'emailphone'
     ]);
     register_sidebar([
         'name' => 'Footer3',
@@ -220,7 +220,7 @@ register_nav_menus([
     add_theme_support('post-thumbnails');
     add_image_size('small_thumbnail', 180, 120, true);
     add_image_size('banner_image', 960, 320, true);
-    add_image_size( 'header', 1920, 250, true );
+    add_image_size( 'header', 2000, 1500, true );
 
 // add new imagesize
 if ( function_exists( 'add_image_size' ) ) {

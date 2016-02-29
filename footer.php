@@ -6,13 +6,13 @@
     </div>
     <div class="row footer">
         <div class="four columns">
-            <?php dynamic_sidebar('Footer1'); ?>
+            <?php dynamic_sidebar('Address'); ?>
         </div>
         <div class="four columns social">
             <?php dynamic_sidebar('Social Media'); ?>
         </div>
         <div class="four columns">
-            <?php dynamic_sidebar('Footer2'); ?>
+            <?php dynamic_sidebar('Email and phone'); ?>
         </div>
     </div>
 
