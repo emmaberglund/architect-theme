@@ -1,22 +1,33 @@
 <footer>
-    <div class="row footer">
-        <div class="six columns footer1">
+    <div class="row">
+        <div class="twelve columns footer1">
             <?php dynamic_sidebar('FooterMap'); ?>
         </div>
-
-        <div class="six columns footer1">
-            <div class="row">
-                <div class="one-third column footerparts">
-                </div>
-                <div class="one-third column footerparts">
-                </div>
-                <div class="one-third column footerparts">
-                </div>
-            </div>
+    </div>
+    <div class="row footer">
+        <div class="four columns">
+            <?php dynamic_sidebar('Address'); ?>
         </div>
+        <div class="four columns social">
+            <?php dynamic_sidebar('Social Media'); ?>
+        </div>
+        <div class="four columns">
+            <?php dynamic_sidebar('Email and phone'); ?>
+        </div>
+    </div>
 
-        <div class="twelve columns"><p class="copy">&copy; <?php bloginfo('author');?> <?php the_time('Y');?></p></div>
+    <div class="row copy">
+        <div class="twelve columns">
+            <p>&copy; <?php bloginfo('author');?> <?php the_time('Y');?></p>
+            <nav class="footer-menu">
+                <?php wp_nav_menu([
+                    'theme_location' => 'footer'
 
+
+                ]); ?>
+            </nav>
+
+        </div>
     </div>
 
 
@@ -26,11 +37,7 @@
 
 
 
-<?php wp_footer([
-    'theme_location' => 'footer'
 
-
-]); ?>
-
+     <?php wp_footer(); ?>
     </body>
 </html>

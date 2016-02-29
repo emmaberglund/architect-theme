@@ -67,7 +67,7 @@ h2.header-text{
 }
 
 .header-image{
-  height: 571px;
+  height: 720px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -311,6 +311,9 @@ header {
 
 /* ---- Front Page CASES ---- */
 .cases-container{
+    h2{
+        margin-top:20px;
+    }
     .row{
         .case-item{
             position: relative;
@@ -368,6 +371,46 @@ header {
     }
 }
 }
+
+footer{
+    text-align: center;
+    font-family: OpenSans, sans-serif;
+    font-size: 1.1em;
+    li{
+        list-style: none;
+    }
+    .footer{
+        background-color: black;
+        color: white;
+        padding: 10% 10% 5%;
+        p, a{
+            color: white;
+        }
+        a:hover{
+            color:rgb(189, 189, 189);
+        }
+        .social img{
+            height:50px;
+            width: 50px;
+            &:first-child{
+                padding-right: 10px;
+            }
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+    .copy{
+        p{
+            margin: 0;
+        }
+        .footer-menu{
+            display:none;
+        }
+    }
+}
+
+
 /* ---- End Front Page CASES ---- */
 
 /* ---- About page ---- */
@@ -680,7 +723,40 @@ h2{
   }
 
 
+footer{
+    .footer{
+        padding: 10% 10%;
+    }
+    .copy{
+        a{
+            color: white;
+            &:hover{
+                color: #bdbdbd;
+            }
+        }
+        p{
+            float: right;
+            color: white;
+        }
+        font-size: 0.9em;
+        padding: 0 10px;
+        background: rgb(0, 0, 0);
+        border-top: 1px solid rgba(255, 255, 255, 0.36);
+        .footer-menu{
+            text-align: left;
+            display: block;
+            ul{
+                margin-bottom: 0;
+                li{
+                    display: inline;
+                    padding-right: 10px;
 
+                }
+            }
+        }
+    }
+
+}
 
 }
 
