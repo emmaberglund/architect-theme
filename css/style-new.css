@@ -127,7 +127,7 @@ header {
         -o-transition: all 0.2s;
         transition: all 0.2s; }
 
-/* ---- NEWS -------*/
+/* ---- Front page News -------*/
 .news {
   position: relative;
   display: block;
@@ -182,8 +182,8 @@ header {
     width: 101%;
     height: 101%; }
 
-/* ---- End NEWS -------*/
-/* ---- PROJECTS -------*/
+/* ---- End Front page News -------*/
+/* ---- Front page Projects -------*/
 .projects-container {
   width: 90%;
   display: block;
@@ -211,8 +211,8 @@ header {
   margin-bottom: 10px;
   padding: 10px; }
 
-/* ---- END PROJECTS -------*/
-/* ---- TEXT-DIVIDER -------*/
+/* ---- END Front page Projects -------*/
+/* ---- Front page Text-divider -------*/
 .text-divider {
   color: black;
   font-family: OpenSans, sans-serif;
@@ -223,11 +223,28 @@ header {
   .text-divider p {
     margin-bottom: 1em;
     margin-top: 1em;
-    text-align: center; }
+    text-align: center;
+    color: white; }
   .text-divider h2 {
-    font-size: 2em; }
+    font-size: 2em;
+    color: white; }
 
-/* ---- END TEXT-DIVIDER -------*/
+.text-divider2 {
+  color: black;
+  font-family: OpenSans, sans-serif;
+  font-size: 16px;
+  background-color: #4E82B9;
+  padding: 20px 40px 20px 40px; }
+  .text-divider2 p {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: center;
+    color: white; }
+  .text-divider2 h2 {
+    font-size: 4em;
+    color: white; }
+
+/* ---- End Front page Text-divider -------*/
 /* ---- Front Page CASES ---- */
 .cases-container .row .case-item {
   position: relative;
@@ -280,10 +297,157 @@ header {
   z-index: -1; }
 
 /* ---- End Front Page CASES ---- */
+/* ---- About page ---- */
+.below-header {
+  padding-top: 170px; }
+
+.four.columns.workers {
+  width: 100%;
+  margin-bottom: 5px;
+  cursor: pointer; }
+
+.workers {
+  margin-left: 0px;
+  position: relative;
+  /*
+  input[type=checkbox]:checked ~ .block-over-text {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.8s ease; }
+  input[type=checkbox]:checked ~ .workers-image {
+    transition: opacity 0.8s ease;
+    opacity: 0; }
+  */ }
+  .workers input {
+    display: none; }
+  .workers label {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    text-indent: -9999px;
+    margin-bottom: 0px; }
+  .workers input[type=checkbox]:checked ~ label::before {
+    background: #222;
+    display: block;
+    width: 20px;
+    height: 2px;
+    transition: all 0.5s ease;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg); }
+  .workers input[type=checkbox]:checked ~ label::after {
+    display: block;
+    background: #222;
+    width: 20px;
+    height: 2px;
+    right: 33px;
+    top: 44px;
+    transition: all 0.5s ease;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg); }
+  .workers .workers-image {
+    text-align: center;
+    height: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; }
+  .workers .block-over {
+    background-color: white;
+    z-index: 11;
+    width: 60%;
+    margin: auto;
+    padding: 40px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: black;
+    font-family: OpenSans, sans-serif;
+    font-size: 16px; }
+  .workers .worker-title {
+    color: black;
+    font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.47);
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0px 10px;
+    margin-top: 180px; }
+  .workers h3 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.47);
+    font-size: 2em; }
+
+.six.columns.text-divider {
+  width: 100%;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px; }
+
+/*
+h2{
+  &:last-child{
+    &::before{
+      content: url("../images/goals.png");
+    }
+  }
+  &:first-child {
+    &::before {
+      content: url("../images/gear.png");
+    }
+  }
+}*/
+.about li {
+  display: inline-block; }
+  .about li img {
+    position: absolute;
+    left: 150px;
+    width: 50px;
+    height: 50px; }
+
+.picture-divider {
+  height: 400px;
+  background-image: url("../images/header-image.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  position: relative;
+  text-align: center;
+  display: table;
+  overflow: hidden; }
+  .picture-divider p {
+    color: black;
+    font-family: OpenSans, sans-serif;
+    font-size: 21px;
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.47);
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 60px; }
+
+.icon {
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px; }
+
+/* ---- End About page---- */
 /*MEDIA QUERIES */
 /* Larger than mobile */
 /* Tablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+  .four.columns.workers {
+    width: 50%; }
   .three.columns.news,
   .three.columns.project {
     width: 50%; }
@@ -326,6 +490,8 @@ header {
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+  .four.columns.workers {
+    width: 50%; }
   .header-image {
     height: 580px; }
   #show-menu {
@@ -369,6 +535,8 @@ header {
 
 /* Larger than desktop */
 @media (min-width: 1025px) {
+  .four.columns.workers {
+    width: 33.333%; }
   .header-image {
     height: 650px; }
     .header-image h3 {
@@ -416,4 +584,8 @@ header {
     .view-button:hover {
       border: 1px solid black; }
   .project {
-    margin-top: 70px; } }
+    margin-top: 70px; }
+  .six.columns.text-divider {
+    width: 50%;
+    margin-left: 0px;
+    margin-bottom: 50px; } }

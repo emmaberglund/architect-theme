@@ -182,7 +182,7 @@ header {
     }
 }
 
-/* ---- NEWS -------*/
+/* ---- Front page News -------*/
 
 .news{
   position: relative;
@@ -239,9 +239,9 @@ header {
     height: 101%;
   }
 }
-/* ---- End NEWS -------*/
+/* ---- End Front page News -------*/
 
-/* ---- PROJECTS -------*/
+/* ---- Front page Projects -------*/
 .projects-container {
   width: 90%;
   display: block;
@@ -268,24 +268,45 @@ header {
     padding:10px;
   }
 }
-/* ---- END PROJECTS -------*/
+/* ---- END Front page Projects -------*/
 
-/* ---- TEXT-DIVIDER -------*/
-.text-divider{
+/* ---- Front page Text-divider -------*/
+
+  .text-divider {
+    @include p-text;
+    background-color: #4E82B9;
+    margin-top: 70px;
+    padding: 20px 40px 20px 40px;
+    p {
+      margin-bottom: 1em;
+      margin-top: 1em;
+      text-align: center;
+      color:white;
+    }
+    h2 {
+      font-size: 2em;
+      color:white;
+    }
+  }
+.text-divider2 {
   @include p-text;
   background-color: #4E82B9;
-  margin-top: 70px;
   padding: 20px 40px 20px 40px;
-  p{
+
+  p {
     margin-bottom: 1em;
     margin-top: 1em;
     text-align: center;
+    color:white;
+
   }
-  h2{
-    font-size: 2em;
+  h2 {
+    font-size: 4em;
+    color:white;
   }
 }
-/* ---- END TEXT-DIVIDER -------*/
+
+/* ---- End Front page Text-divider -------*/
 
 
 /* ---- Front Page CASES ---- */
@@ -349,6 +370,166 @@ header {
 }
 /* ---- End Front Page CASES ---- */
 
+/* ---- About page ---- */
+.below-header{
+  padding-top: 170px;
+}
+
+.four.columns.workers{
+  width: 100%;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.workers{
+  input{
+    display: none;
+  }
+  label {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    text-indent: -9999px;
+    margin-bottom: 0px;
+  }
+  input[type=checkbox]:checked ~ label::before {
+    background: #222;
+    display: block;
+    width: 20px;
+    height: 2px;
+    transition: all 0.5s ease;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg); }
+  input[type=checkbox]:checked ~ label::after {
+    display: block;
+    background: #222;
+    width: 20px;
+    height: 2px;
+    right: 33px;
+    top: 44px;
+    transition: all 0.5s ease;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg); }
+
+  margin-left: 0px;
+  position: relative;
+
+  .workers-image{
+    text-align: center;
+    height: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .block-over{
+    background-color: white;
+    z-index: 11;
+    width: 60%;
+    margin: auto;
+    padding: 40px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    //transition: opacity 0.8s ease;
+    display: none;
+    @include p-text;
+  }
+  .worker-title{
+    @include p-text;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.47);
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0px 10px;
+    margin-top: 180px;
+  }
+  h3{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.47);
+    font-size: 2em;
+  }
+/*
+  input[type=checkbox]:checked ~ .block-over-text {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.8s ease; }
+  input[type=checkbox]:checked ~ .workers-image {
+    transition: opacity 0.8s ease;
+    opacity: 0; }
+  */
+}
+
+.six.columns.text-divider{
+  width: 100%;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+  /*
+h2{
+  &:last-child{
+    &::before{
+      content: url("../images/goals.png");
+    }
+  }
+  &:first-child {
+    &::before {
+      content: url("../images/gear.png");
+    }
+  }
+}*/
+.about{
+  li{
+    display: inline-block;
+    img{
+      position: absolute;
+      left: 150px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+.picture-divider{
+  height: 400px;
+  background-image: url("../images/header-image.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  position: relative;
+  text-align: center;
+  display: table;
+  overflow: hidden;
+  p{
+    @include p-header-text;
+    font-size: 3em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.47);
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 60px;
+  }
+}
+.icon{
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+/* ---- End About page---- */
+
+
+
+
+
+
+
 
 /*MEDIA QUERIES */
 @media (min-width: 480px) {
@@ -362,6 +543,9 @@ header {
 
 /* Tablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+  .four.columns.workers{
+    width: 50%;
+  }
   .three.columns.news,
   .three.columns.project
   {
@@ -426,6 +610,9 @@ header {
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+  .four.columns.workers{
+    width: 50%;
+  }
 
     .header-image{
         height: 580px;
@@ -499,6 +686,9 @@ header {
 
 /* Larger than desktop */
 @media (min-width: 1025px) {
+  .four.columns.workers{
+    width: 33.333%;
+  }
     .header-image{
         height: 650px;
         h3{
@@ -572,6 +762,11 @@ header {
 
   .project{
     margin-top: 70px;
+  }
+  .six.columns.text-divider{
+    width: 50%;
+    margin-left: 0px;
+    margin-bottom: 50px;
   }
 
 }

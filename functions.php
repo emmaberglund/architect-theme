@@ -75,7 +75,26 @@ function our_widgets_init(){
         'id' => 'contact2',
         'class' => 'contact2'
     ]);
-
+    register_sidebar([
+        'name' => 'About Us - The company ',
+        'id' => 'aboutus',
+        'class' => 'aboutus'
+    ]);
+    register_sidebar([
+        'name' => 'About Us - Vision',
+        'id' => 'aboutusvision',
+        'class' => 'aboutusvision'
+    ]);
+    register_sidebar([
+        'name' => 'About Us - Picturedivider',
+        'id' => 'aboutuspicturedivider',
+        'class' => 'aboutuspicturedivider'
+    ]);
+    register_sidebar([
+        'name' => 'About Us - Team',
+        'id' => 'aboutusteam',
+        'class' => 'aboutusteam'
+    ]);
 
 }
 

@@ -15,11 +15,30 @@ if(have_posts()) :
         ?>
         <main>
             <div class="container">
-                <div class="row below-header">
-                    <div class="twelve columns">
-                        <h3><?php the_content();?></h3>
+                <div class="below-header">
+                    <div class="row about text-divider">
+                        <div class="six columns">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/gear.png" class="icon">
+                            <?php dynamic_sidebar('About Us - The Company'); ?>
+                        </div>
+                        <div class="six columns">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/goals.png" class="icon">
+                            <?php dynamic_sidebar('About Us - Vision'); ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="twelve columns picture-divider">
+                            <?php dynamic_sidebar('About Us - Picturedivider'); ?>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="twelve columns text-divider2">
+                            <?php dynamic_sidebar('About Us - Team'); ?>
+                        </div>
                     </div>
                 </div>
+
+                <div class="row">
 
                 <?php
 
@@ -27,18 +46,23 @@ if(have_posts()) :
                 $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_column' => 'menu_order'));
                 ?>
 
-                <div class="row">
                     <?php
                     foreach ($pages as $page) {
                     ?>
 
-
+                    <label for="person">
                     <div class="workers four columns">
-                        <?php echo get_the_post_thumbnail( $page->ID, array(200, 200)  ); ?>
-                        <h3><?php echo $page->post_title; ?></h3>
-                        <p><?php echo $page->post_content; ?></p>
-                    </div>
+                        <input type="checkbox" id="person">
 
+                            <div class ="workers-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page->ID), 'large')[0]; ?>);">
+                            <h3><?php echo $page->post_title; ?></h3>
+                            <p class="worker-title"><?php echo $page->post_content; ?></p>
+                        </div>
+                        <div class="block-over">
+                            <p class="block-over-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel efficitur mi. Nunc vitae aliquet sem. </p>
+                        </div>
+                    </div>
+                    </label>
 
 
                     <?php if(1==2) {?>
@@ -54,10 +78,13 @@ if(have_posts()) :
     <?php
     endwhile;
 
+
 else :
     echo "No content available!";
 
 endif;
 
+
 get_footer();
 ?>
+
