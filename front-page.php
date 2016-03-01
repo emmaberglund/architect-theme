@@ -132,7 +132,6 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         ?>
 
         <div class="cases-container">
-            <h2><?php echo $casesPage->post_title; ?></h2>
             <div class="row">
 
                     <?php

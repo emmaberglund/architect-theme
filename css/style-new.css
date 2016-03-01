@@ -6,6 +6,10 @@
   font-family: OpenSans;
   src: url(../fonts/OpenSans-Light.ttf); }
 
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.ttf); }
+
 .clear {
   content: " ";
   display: table;
@@ -45,7 +49,7 @@ h2.header-text {
   background-size: cover; }
 
 .header-image-page {
-  height: 400px;
+  height: 300px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -110,8 +114,8 @@ header {
   list-style: none;
   padding-right: 20px; }
   #menu ul li {
-    font-family: lato, sans-serif;
-    text-transform: uppercase;
+    font-family: Raleway, sans-serif;
+    text-transform: capitalize;
     font-weight: 300;
     margin: 0 0 0 25px;
     border-bottom: solid 1px rgba(255, 255, 255, 0.42);
@@ -265,17 +269,23 @@ header {
 .cases-container .row .case-item {
   position: relative;
   float: left;
-  width: 100%;
+  width: 50%;
   box-sizing: border-box;
-  padding-bottom: 55%;
+  padding-bottom: 30%;
   overflow: hidden;
   background: white; }
-  .cases-container .row .case-item:nth-child(odd) {
+  .cases-container .row .case-item:first-child {
+    background: #F4F4F4; }
+  .cases-container .row .case-item:last-child {
     background: #F4F4F4; }
 
 .cases-container .row .case-item.small {
   width: 33%;
   padding-bottom: 20.3%; }
+  .cases-container .row .case-item.small:nth-child(odd) {
+    background: #F4F4F4; }
+  .cases-container .row .case-item.small:nth-child(even) {
+    background: white; }
 
 .cases-container .row .case-img {
   position: absolute;
@@ -286,7 +296,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 1;
+  opacity: 0.5;
   z-index: 2;
   transition: opacity 0.5s; }
   .cases-container .row .case-img:hover {
@@ -465,6 +475,8 @@ h2{
   padding-top: 400px; }
 
 /* ---- End About page---- */
+/* --- Cases page ---- */
+/* --- End Cases page ---- */
 footer {
   text-align: center;
   font-family: OpenSans, sans-serif;
@@ -530,8 +542,12 @@ footer {
     padding-bottom: 17%;
     overflow: hidden; }
   .cases-container .row .case-item.small {
-    width: 14.2857%;
-    padding-bottom: 8.3%; }
+    width: 20%;
+    padding-bottom: 13%; }
+    .cases-container .row .case-item.small:nth-child(odd) {
+      background: #F4F4F4; }
+    .cases-container .row .case-item.small:nth-child(even) {
+      background: white; }
   .cases-container .row .case-img {
     opacity: 0.5;
     transition: opacity 0.5s; }
@@ -545,6 +561,8 @@ footer {
     width: 50%; }
   .header-image {
     height: 720px; }
+  .header-image-page {
+    height: 400px; }
   #show-menu {
     display: none; }
   header #desktop-menu {
@@ -554,10 +572,10 @@ footer {
     header #desktop-menu ul {
       position: absolute;
       right: 20px;
-      top: 23px; }
+      top: 27px; }
       header #desktop-menu ul li {
-        font-family: lato, sans-serif;
-        text-transform: uppercase;
+        font-family: Raleway, sans-serif;
+        text-transform: capitalize;
         display: inline-block;
         float: left;
         min-height: 1px;
