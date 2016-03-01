@@ -30,7 +30,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         'post_type' => 'page',
         'post_parent' => $news->ID,
         'post_status' => 'publish',
-        'posts_per_page' => -1,
+        'posts_per_page' => 4,
         'caller_get_posts'=> 1
     );
     $my_query = null;
@@ -85,7 +85,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             'post_type' => 'page',
             'post_parent' => $project->ID,
             'post_status' => 'publish',
-            'posts_per_page' => -1,
+            'posts_per_page' => 4,
             'caller_get_posts'=> 1
         );
         $my_query = null;

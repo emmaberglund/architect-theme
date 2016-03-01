@@ -169,7 +169,7 @@ header {
     text-align: center; }
 
 .caption {
-  position: absolute;
+  position: relative;
   top: 0;
   z-index: 11;
   width: 100%;
@@ -179,6 +179,7 @@ header {
     text-align: center;
     margin-bottom: 0px; }
   .caption .view-button {
+    position: absolute;
     margin-top: 110px;
     background: rgba(255, 255, 255, 0.6);
     color: black;
@@ -248,20 +249,20 @@ header {
     color: white; }
 
 .text-divider2 {
+  background: rgba(0, 0, 0, 0.9);
   color: black;
   font-family: OpenSans, sans-serif;
   font-size: 16px; }
   .text-divider2 p {
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-bottom: 0;
     text-align: center;
     color: #EAEAEA;
-    font-size: 1.3em;
-    background: rgba(0, 0, 0, 0.9);
     padding: 20px 40px 20px 40px; }
   .text-divider2 h2 {
     font-size: 4em;
-    color: white; }
+    color: white;
+    margin-bottom: 0px;
+    padding-top: 15px; }
 
 /* ---- End Front page Text-divider -------*/
 /* ---- Front Page CASES ---- */
@@ -455,7 +456,7 @@ h2{
     height: 50px; }
 
 .picture-divider {
-  height: 350px;
+  height: 300px;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -470,6 +471,8 @@ h2{
     color: white;
     background-color: rgba(0, 0, 0, 0.52);
     margin-top: 80px; }
+  .picture-divider li {
+    margin-bottom: 0px; }
 
 .icon {
   width: 45px;
@@ -479,8 +482,11 @@ h2{
   margin-bottom: 10px; }
 
 #header-image-about {
-  height: 350px;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-top: 400px; }
 
 /* ---- End About page---- */
 /* --- Cases page ---- */

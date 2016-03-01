@@ -15,9 +15,8 @@ if(have_posts()) :
         ?>
         <main>
             <div class="container">
-                <div class="header-image" id="header-image-about" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]; ?>);"></div>
-                <div class="">
-                    <div class="row about text-divider">
+                <div class="header-image" id="header-image-about" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'header-image')[0]; ?>);">
+                    <div class="row about text-divider" id="text-divider1">
                         <div class="six columns">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/gear.png" class="icon">
                             <?php dynamic_sidebar('About Us - The Company'); ?>
@@ -32,12 +31,15 @@ if(have_posts()) :
                             <?php dynamic_sidebar('About Us - Picturedivider'); ?>
                         </div>
                     </div>
+
+                </div>
                     <div class="row">
                         <div class="twelve columns text-divider2">
                             <?php dynamic_sidebar('About Us - Team'); ?>
                         </div>
                     </div>
-                </div>
+
+
 
                 <div class="row">
 
