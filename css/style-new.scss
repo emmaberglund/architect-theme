@@ -341,12 +341,15 @@ header {
         .case-item{
             position: relative;
             float: left;
-            width: 100%;
+            width: 50%;
             box-sizing: border-box;
-            padding-bottom: 55%;
+            padding-bottom: 30%;
             overflow: hidden;
             background: white;
-            &:nth-child(odd){
+            &:first-child{
+                background: #F4F4F4;
+            }
+            &:last-child{
                 background: #F4F4F4;
             }
 
@@ -354,6 +357,12 @@ header {
         .case-item.small{
             width: 33%;
             padding-bottom: 20.3%;
+            &:nth-child(odd){
+                background: #F4F4F4;
+            }
+            &:nth-child(even){
+                background: white;
+            }
         }
     .case-img{
         position: absolute;
@@ -364,7 +373,7 @@ header {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        opacity: 1;
+        opacity: 0.5;
         z-index: 2;
         transition: opacity 0.5s;
 
@@ -555,6 +564,9 @@ h2{
 }
 /* ---- End About page---- */
 
+/* --- Cases page ---- */
+
+/* --- End Cases page ---- */
 
 
 footer{
@@ -664,8 +676,15 @@ footer{
               overflow: hidden;
           }
           .case-item.small{
-              width: 14.2857%;
-              padding-bottom: 8.3%;
+              width: 20%;
+              padding-bottom: 13%;
+              &:nth-child(odd){
+                  background: #F4F4F4;
+              }
+              &:nth-child(even){
+                  background: white;
+              }
+
           }
         .case-img{
           opacity: 0.5;
@@ -678,6 +697,8 @@ footer{
       }
   }
  }
+
+
 
 }
 
