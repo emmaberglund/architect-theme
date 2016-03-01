@@ -44,7 +44,7 @@ h2.header-text {
   width: 100%;
   overflow: hidden;
   position: relative;
-  z-index: -1;
+  z-index: 1;
   background-position: center center;
   background-size: cover; }
 
@@ -197,9 +197,12 @@ header {
 /* ---- End Front page News -------*/
 /* ---- Front page Projects -------*/
 .projects-container {
-  width: 90%;
+  width: 100%;
   display: block;
-  margin: auto; }
+  margin: auto;
+  background: white; }
+  .projects-container .row {
+    padding: 0 5%; }
   .projects-container p {
     text-align: center;
     color: black;
@@ -229,7 +232,6 @@ header {
   color: black;
   font-family: OpenSans, sans-serif;
   font-size: 16px;
-  margin-top: 70px;
   background: rgba(0, 0, 0, 0.9);
   padding: 40px 40px 40px 40px; }
   .text-divider li {
@@ -326,6 +328,17 @@ header {
   margin-top: 0; }
 
 /* ---- End Front Page CASES ---- */
+.fixed-image-section .picture-divider {
+  height: 200px;
+  background: rgba(0, 0, 0, 0.17); }
+  .fixed-image-section .picture-divider .fixed-image img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto; }
+
 /* ---- About page ---- */
 .below-header {
   padding-top: 170px; }
@@ -443,7 +456,6 @@ h2{
 
 .picture-divider {
   height: 350px;
-  background-image: url("../images/header-image.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -647,9 +659,12 @@ footer {
   .three.columns.project {
     width: 25%; }
   .news-container {
-    width: 90%;
+    width: 100%;
     display: block;
-    margin: auto; }
+    margin: auto;
+    background: white; }
+    .news-container .row {
+      padding: 0 5%; }
     .news-container .news:first-child {
       border-left: 4px solid white; }
     .news-container .news:nth-child(2) {

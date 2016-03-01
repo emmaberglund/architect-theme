@@ -4,19 +4,16 @@
     if(have_posts()) :
         while (have_posts()) : the_post(); ?>
 
-<?php global $post; ?>
+<?php global $post;
+
+    //get the content of the current post inside the loop
+    $content = get_the_content();
+
+?>
 <div class="header-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'header-image')[0]; ?>);">
 
 </div>
-<?php
-    endwhile;
 
-else :
-    echo "No content available!";
-
-endif;
-
-?>
 <?php
 $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_column' => 'menu_order'));
 ?>
@@ -72,7 +69,11 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
     </div>
     <div class="row">
         <div class="twelve columns text-divider">
-            <p><?php the_content();?></p>
+            <p><?php
+            //print the text without images:
+            echo remove_img_from_content($content);
+              ?>
+          </p>
         </div>
     </div>
 
@@ -117,6 +118,26 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             ?>
         </div>
         </div>
+
+        <div class="row fixed-image-section">
+            <div class="picture-divider">
+                <div class="fixed-image">
+                    <?php
+
+                    //get the images and print them
+                    $images = get_the_images($content);
+                    foreach($images as $image) {
+                        echo $image[0];
+                    }
+                    ?>
+                </div>
+                <div class="picture-overlay"></div>
+
+
+            </div>
+        </div>
+
+
 
         <?php
         // Set up the objects needed
@@ -166,4 +187,14 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
 
     </div>
 </div>
-<?php get_footer(); ?>
+
+<?php
+    endwhile;
+
+else :
+    echo "No content available!";
+
+endif;
+
+
+get_footer(); ?>
