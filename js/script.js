@@ -19,7 +19,7 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
 
                  });
                  $('#header #desktop-menu ul').css({
-                     'top':'23px'
+                     'top':'27px'
                  });
                  $('#header #show-menu').css({
                      'top':'50px'
