@@ -33,7 +33,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         'post_type' => 'page',
         'post_parent' => $news->ID,
         'post_status' => 'publish',
-        'posts_per_page' => -1,
+        'posts_per_page' => 4,
         'caller_get_posts'=> 1
     );
     $my_query = null;
@@ -81,10 +81,10 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         $project =  get_page_by_title('Projekt');
         //replace post_parent value with your portfolio page id:
         $args=array(
-            'post_type' => $project->ID,
-            'post_parent' => 12,
+            'post_type' => 'page',
+            'post_parent' => $project->ID,
             'post_status' => 'publish',
-            'posts_per_page' => -1,
+            'posts_per_page' => 4,
             'caller_get_posts'=> 1
         );
         $my_query = null;
