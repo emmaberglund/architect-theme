@@ -6,6 +6,10 @@
   font-family: OpenSans;
   src: url(../fonts/OpenSans-Light.ttf); }
 
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.ttf); }
+
 .clear {
   content: " ";
   display: table;
@@ -110,8 +114,8 @@ header {
   list-style: none;
   padding-right: 20px; }
   #menu ul li {
-    font-family: lato, sans-serif;
-    text-transform: uppercase;
+    font-family: Raleway, sans-serif;
+    text-transform: capitalize;
     font-weight: 300;
     margin: 0 0 0 25px;
     border-bottom: solid 1px rgba(255, 255, 255, 0.42);
@@ -554,8 +558,8 @@ footer {
       right: 20px;
       top: 27px; }
       header #desktop-menu ul li {
-        font-family: lato, sans-serif;
-        text-transform: uppercase;
+        font-family: Raleway, sans-serif;
+        text-transform: capitalize;
         display: inline-block;
         float: left;
         min-height: 1px;
