@@ -692,7 +692,8 @@ footer {
     .view-button:hover {
       border: 1px solid black; }
   .project {
-    margin-top: 70px; }
+    margin-top: 70px;
+    margin-bottom: 70px; }
   .six.columns.text-divider {
     width: 50%;
     margin-left: 0px;
