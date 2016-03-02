@@ -292,7 +292,7 @@ header {
 
 /* ---- Front page Text-divider -------*/
 
-  .text-divider {
+  .text-divider, .text-divider3 {
     @include p-text;
     background: rgba(0, 0, 0, 0.9);
     padding: 40px 40px 40px 40px;
@@ -329,6 +329,11 @@ header {
     margin-bottom: 0px;
     padding-top: 15px;
   }
+}
+.text-divider3{
+    img{
+        display: none;
+    }
 }
 
 /* ---- End Front page Text-divider -------*/
@@ -604,7 +609,7 @@ footer{
         margin-bottom: 0;
     }
     .footer{
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.9);
         color: white;
         padding: 10% 10% 5%;
         p, a{

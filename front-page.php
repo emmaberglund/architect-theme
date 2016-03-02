@@ -68,12 +68,12 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
         </div>
     </div>
     <div class="row">
-        <div class="twelve columns text-divider">
-            <p><?php
+        <div class="twelve columns text-divider3">
+            <?php
             //print the text without images:
-            echo remove_img_from_content($content);
+            the_content();
               ?>
-          </p>
+          
         </div>
     </div>
 
