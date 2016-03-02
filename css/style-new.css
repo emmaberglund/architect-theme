@@ -178,12 +178,18 @@ header {
   .caption p {
     text-align: center;
     margin-bottom: 0px; }
-  .caption .view-button {
+
+.button-div {
+  position: relative;
+  width: 100%; }
+  .button-div .view-button {
     position: absolute;
-    margin-top: 110px;
+    bottom: 60px;
+    left: 29%;
     background: rgba(255, 255, 255, 0.6);
     color: black;
-    border: 1px solid black; }
+    border: 1px solid black;
+    display: inline-block; }
 
 .news-container {
   margin: 0px 30px; }
@@ -193,7 +199,8 @@ header {
     left: 0;
     z-index: 10;
     width: 101%;
-    height: 101%; }
+    height: 101%;
+    margin-left: -1px; }
 
 /* ---- End Front page News -------*/
 /* ---- Front page Projects -------*/
@@ -553,7 +560,18 @@ footer {
     transition: opacity 0.5s; }
     .cases-container .row .case-img:hover {
       opacity: 1;
-      transition: opacity 0.5s; } }
+      transition: opacity 0.5s; }
+  .button-div {
+    position: relative;
+    width: 100%; }
+    .button-div .view-button {
+      position: absolute;
+      bottom: 60px;
+      left: 34%;
+      background: rgba(255, 255, 255, 0.6);
+      color: black;
+      border: 1px solid black;
+      display: inline-block; } }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
@@ -667,13 +685,20 @@ footer {
       width: 101%; }
   header #menu ul li {
     padding: 27px 20px; }
-  .view-button {
-    margin-top: 90px;
-    display: none;
-    border: 1px solid black;
-    transition: all ease-in-out; }
-    .view-button:hover {
-      border: 1px solid black; }
+  .button-div {
+    position: relative;
+    width: 100%; }
+    .button-div .view-button {
+      position: absolute;
+      bottom: 60px;
+      left: 29%;
+      background: rgba(255, 255, 255, 0.6);
+      color: black;
+      border: 1px solid black;
+      display: none;
+      transition: all ease-in-out; }
+      .button-div .view-button:hover {
+        border: 1px solid black; }
   .project {
     margin-top: 70px; }
   .six.columns.text-divider {

@@ -236,12 +236,20 @@ header {
     text-align: center;
     margin-bottom: 0px;
   }
+
+}
+
+.button-div{
+  position: relative;
+  width: 100%;
   .view-button{
     position: absolute;
-    margin-top: 110px;
+    bottom:60px;
+    left:29%;
     background: rgba(white, 0.6);
     color:black;
     border: 1px solid black;
+    display: inline-block;
   }
 }
 .news-container{
@@ -253,6 +261,7 @@ header {
     z-index: 10;
     width: 101%;
     height: 101%;
+    margin-left: -1px;
   }
 }
 /* ---- End Front page News -------*/
@@ -707,6 +716,19 @@ footer{
   }
  }
 
+  .button-div{
+    position: relative;
+    width: 100%;
+    .view-button{
+      position: absolute;
+      bottom:60px;
+      left:34%;
+      background: rgba(white, 0.6);
+      color:black;
+      border: 1px solid black;
+      display: inline-block;
+    }
+  }
 
 
 }
@@ -890,12 +912,23 @@ footer{
   }
 
   .view-button{
-    margin-top: 90px;
-    display: none;
-    border: 1px solid black;
-    transition: all ease-in-out;
-    &:hover{
+
+  }
+  .button-div{
+    position: relative;
+    width: 100%;
+    .view-button{
+      position: absolute;
+      bottom:60px;
+      left:29%;
+      background: rgba(white, 0.6);
+      color:black;
       border: 1px solid black;
+      display: none;
+      transition: all ease-in-out;
+      &:hover{
+        border: 1px solid black;
+      }
     }
   }
 
