@@ -53,7 +53,7 @@ h2.header-text {
   width: 100%;
   overflow: hidden;
   position: relative;
-  z-index: -1;
+  z-index: 1;
   background-position: center center;
   background-size: cover; }
 
@@ -501,6 +501,34 @@ h2{
 /* ---- End About page---- */
 /* --- Cases page ---- */
 /* --- End Cases page ---- */
+/* ---- Contact Page ---- */
+.contact-container {
+  background: white; }
+  .contact-container .contact-form {
+    padding: 70px 0; }
+    .contact-container .contact-form .contact1 {
+      color: black;
+      font-family: OpenSans, sans-serif;
+      font-size: 16px;
+      text-align: center;
+      font-size: 1.7em; }
+    .contact-container .contact-form form {
+      width: 300px;
+      text-align: center;
+      margin: 0 auto; }
+      .contact-container .contact-form form #submit {
+        background-color: #4E82B9;
+        color: white; }
+      .contact-container .contact-form form input, .contact-container .contact-form form textarea {
+        width: 100%;
+        font-family: LANEAR, sans-serif; }
+      .contact-container .contact-form form textarea {
+        margin-bottom: 5px; }
+    .contact-container .contact-form h2 {
+      text-align: center;
+      color: black; }
+
+/* ---- End Contact Page ---- */
 footer {
   text-align: center;
   font-family: OpenSans, sans-serif;
@@ -588,7 +616,13 @@ footer {
       background: rgba(255, 255, 255, 0.6);
       color: black;
       border: 1px solid black;
-      display: inline-block; } }
+      display: inline-block; }
+  .contact-container .six.columns {
+    margin-left: 0; }
+  .contact-container .contact-intro {
+    padding-bottom: 20px; }
+  .contact-container .form form {
+    width: 250px; } }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
@@ -630,6 +664,16 @@ footer {
             filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=78);
             opacity: 0.78;
             transition: background-color 1s; }
+      header #desktop-menu ul .current-menu-item a::after {
+        content: "";
+        display: block;
+        bottom: 24px;
+        height: 1px;
+        width: 100%;
+        background-color: white;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=78);
+        opacity: 0.78;
+        transition: background-color 1s; }
   .show-menu {
     display: none; }
   .three.columns {
@@ -725,4 +769,6 @@ footer {
   .six.columns.text-divider {
     width: 50%;
     margin-left: 0px;
-    margin-bottom: 50px; } }
+    margin-bottom: 50px; }
+  .contact-container .form form {
+    width: 425px; } }

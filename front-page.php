@@ -76,7 +76,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
             //print the text without images:
             the_content();
               ?>
-          
+
         </div>
     </div>
 
@@ -134,10 +134,6 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                     }
                     ?>
                 </div>
-                <div class="picture-overlay"></div>
-
-
-            </div>
         </div>
 
 

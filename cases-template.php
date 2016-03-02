@@ -20,7 +20,7 @@ if(have_posts()) :
     <main class="cases">
         <div class="cases-container">
             <div class="row">
-                <div class="twelve columns text-divider">
+                <div class="twelve columns text-divider3">
                     <p><?php the_content();?></p>
                 </div>
             </div>
