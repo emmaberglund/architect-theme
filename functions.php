@@ -20,11 +20,30 @@ function wpt_theme_styles(){
 
 add_action('wp_enqueue_scripts', 'wpt_theme_styles' );
 
-
-
-
-
 add_theme_support( 'post-thumbnails' );
+
+
+
+//function to remove images from content
+function remove_img_from_content($content) {
+
+  //remove all images form content
+  $content = preg_replace("/<img[^>]+\>/i", "", $content);
+
+  return $content;
+
+}
+
+//function to get images
+function get_the_images($content) {
+
+     //$matches will be an array with all images
+     preg_match_all("/<img[^>]+\>/i", $content, $matches);
+     return $matches;
+
+}
+
+
 
 function our_widgets_init(){
     register_sidebar([
@@ -257,7 +276,7 @@ add_filter('image_size_names_choose', 'my_image_sizes');
 function my_image_sizes($sizes) {
     $addsizes = array(
         "new-size" => __( "New Size"),
-        "header" => __("Header"),
+        "header-image" => __("Header image"),
         "header-image-page" => __("Header Image Page")
     );
     $newsizes = array_merge($sizes, $addsizes);

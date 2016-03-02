@@ -75,7 +75,7 @@ h2.header-text{
   width: 100%;
   overflow: hidden;
   position: relative;
-  z-index: -1;
+  z-index: 1;
   background-position: center center;
   background-size: cover;
   //background-attachment: fixed;
@@ -268,9 +268,13 @@ header {
 
 /* ---- Front page Projects -------*/
 .projects-container {
-  width: 90%;
+  width: 100%;
   display: block;
   margin: auto;
+  background: white;
+  .row{
+      padding: 0 5%;
+  }
   p{
     text-align: center;
     @include p-text;
@@ -416,6 +420,20 @@ header {
 
 /* ---- End Front Page CASES ---- */
 
+.fixed-image-section{
+    .picture-divider{
+        height: 200px;
+        background: rgba(0, 0, 0, 0.17);
+        .fixed-image img{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
 
 /* ---- About page ---- */
 .below-header{
@@ -544,7 +562,6 @@ h2{
 }
 .picture-divider{
   height: 300px;
-  //background-image: url("../images/header-image.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -878,9 +895,13 @@ footer{
     width: 25%;
   }
   .news-container{
-    width: 90%;
+    width: 100%;
     display: block;
     margin: auto;
+    background: white;
+    .row{
+        padding: 0 5%;
+    }
     .news{
       //-webkit-clip-path: polygon(50% 0%, 100% 27%, 100% 100%, 0 100%, 0 27%);
       //clip-path: polygon(50% 0%, 100% 27%, 100% 100%, 0 100%, 0 27%);
@@ -934,6 +955,7 @@ footer{
 
   .project{
     margin-top: 70px;
+    margin-bottom: 70px;
   }
   .six.columns.text-divider{
     width: 50%;
