@@ -54,9 +54,12 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                         <?php
                         global $more; $more = false;
                         ?>
+
                         <?php the_content('Read on....');?>
+                        </div>
+                        <div class="button-div">
                             <button class="view-button">Läs mer</button>
-                    </div>
+                        </div>
                     </div>
 
              <?php
