@@ -19,11 +19,11 @@ get_header();
                 </div>
             </div>
             <div class="row contact-info contact-form">
-                <div class="six columns contact1">
+                <div class="four columns contact1">
                     <?php dynamic_sidebar('Contact 1'); ?>
                 </div>
-                <div class="six columns form">
-                    <h2>Kontakta oss gärna</h2>
+                <div class="four columns form">
+                    <h2>Kontakta oss</h2>
                     <?php
                     if(isset($_POST['submit'])) { $flag=1; if($_POST['yourname']=='') { $flag=0; echo "Skriv in ditt namn<br>"; }
                     else if(!preg_match('/[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*/',$_POST['yourname'])) { $flag=0; echo "Skriv in ett giltigt namn<br>"; } if($_POST['email']=='') { $flag=0; echo "Skriv in din e-mail<br>"; }
@@ -42,6 +42,9 @@ get_header();
                             <textarea  placeholder="Meddelande" name="message" id="message"></textarea><br>
                             <input type="submit" name="submit" id="submit" value="Skicka">
                         </form>
+                    </div>
+                    <div class="four columns contact1">
+                        <?php dynamic_sidebar('Contact 2'); ?>
                     </div>
                 </div>
             </div>

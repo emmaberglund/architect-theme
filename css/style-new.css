@@ -409,7 +409,7 @@ header {
     position: relative; }
   .workers .block-over {
     background-color: white;
-    z-index: 11;
+    z-index: 1;
     width: 60%;
     margin: auto;
     padding: 40px;
@@ -510,18 +510,19 @@ h2{
       color: black;
       font-family: OpenSans, sans-serif;
       font-size: 16px;
-      text-align: center;
-      font-size: 1.7em; }
+      text-align: center; }
     .contact-container .contact-form form {
-      width: 300px;
+      width: 285px;
       text-align: center;
       margin: 0 auto; }
-      .contact-container .contact-form form #submit {
-        background-color: #4E82B9;
-        color: white; }
       .contact-container .contact-form form input, .contact-container .contact-form form textarea {
         width: 100%;
         font-family: LANEAR, sans-serif; }
+      .contact-container .contact-form form #submit {
+        background-color: #4E82B9;
+        color: white;
+        width: 25%;
+        padding: 0; }
       .contact-container .contact-form form textarea {
         margin-bottom: 5px; }
     .contact-container .contact-form h2 {
@@ -771,4 +772,4 @@ footer {
     margin-left: 0px;
     margin-bottom: 50px; }
   .contact-container .form form {
-    width: 425px; } }
+    width: 285px; } }

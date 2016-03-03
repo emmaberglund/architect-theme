@@ -53,18 +53,6 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
         $("#menu ul").toggle(500);
     });
 
-    //Toggle workers-info
-    $('.toggle').click(function(){
-        $('.toggle').not(this).toggleClass('.block-over');
-        $(this).show(400);
-    });
-
-   /* $(".toggle").click(function () {
-        $(".effect").not(this).addClass('block-over');
-        $(this).toggleClass('block-over');
-
-    });
-*/
     $(document).ready(function () {
         $(document).on('mouseenter', '.news', function () {
             $(this).find(":button").fadeIn();
@@ -73,14 +61,23 @@ jQuery(function($) { // DOM is now read and ready to be manipulated
         });
     });
 
-    $(document).ready(function(){
-        $('#person').change(function(){
-            if(this.checked)
-                $('.block-over').fadeIn('slow');
-            else
-                $('.block-over').fadeOut('slow');
 
-        });
-    });
+//Function for checking which workers div is clicked and show the correct block-over
+function toggle_workers( event ) {
+  var target = $( event.target );
+  var workers = $('.workers').length;
+  for(var i = 0; i < workers ; i++){
+      if ( target.is( "#person-" + i) ) {
+        $('#block-' + i).fadeIn('slow');
+      }
+      else if(target.is("#block-" + i) || target.is("#block-over-text-" + i)){
+          $("#block-" + i).fadeOut('slow');
+      }
+  }
+}
+$( ".workers-image" ).click( toggle_workers );
+$( ".block-over" ).click( toggle_workers );
+
+
 
 });

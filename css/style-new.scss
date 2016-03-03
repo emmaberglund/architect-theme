@@ -496,7 +496,7 @@ header {
   }
   .block-over{
     background-color: white;
-    z-index: 11;
+    z-index: 1;
     width: 60%;
     margin: auto;
     padding: 40px;
@@ -616,20 +616,22 @@ h2{
         .contact1{
             @include p-text;
             text-align: center;
-            font-size: 1.7em;
+
         }
     form{
-        width: 300px;
+        width: 285px;
         text-align: center;
         margin: 0 auto;
-        #submit{
-            background-color:$blue;
-            color:white;
-        }
         input, textarea{
             width: 100%;
             font-family: LANEAR, sans-serif;
 
+        }
+        #submit{
+            background-color:$blue;
+            color:white;
+            width: 25%;
+            padding:0;
         }
         textarea{
             margin-bottom: 5px;
@@ -1030,7 +1032,7 @@ footer{
 
   .contact-container{
     .form form{
-        width: 425px;
+        width: 285px;
     }
 }
 
