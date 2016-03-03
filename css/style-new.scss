@@ -92,7 +92,7 @@ h2.header-text{
     width: 100%;
     overflow: hidden;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     background-position: center center;
     background-size: cover;
 
@@ -613,6 +613,41 @@ h2{
 
 /* --- End Cases page ---- */
 
+/* ---- Contact Page ---- */
+.contact-container{
+    background: white;
+    .contact-form{
+        padding: 70px 0;
+        .contact1{
+            @include p-text;
+            text-align: center;
+            font-size: 1.7em;
+        }
+    form{
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        #submit{
+            background-color:$blue;
+            color:white;
+        }
+        input, textarea{
+            width: 100%;
+            font-family: LANEAR, sans-serif;
+
+        }
+        textarea{
+            margin-bottom: 5px;
+        }
+    }
+    h2{
+        text-align: center;
+        color: black;
+    }
+}
+}
+/* ---- End Contact Page ---- */
+
 
 footer{
     text-align: center;
@@ -809,7 +844,17 @@ footer{
       display: inline-block;
     }
   }
-
+  .contact-container{
+      .six.columns{
+          margin-left: 0;
+      }
+      .contact-intro{
+          padding-bottom: 20px;
+      }
+      .form form{
+          width: 250px;;
+      }
+  }
 
 }
 
@@ -852,8 +897,9 @@ footer{
                     &:hover{
 
                     }
+
                     a{
-                        color: $text-color;;
+                        color: $text-color;
                         &:hover{
 
                             &::after {
@@ -873,6 +919,20 @@ footer{
                     }
 
 
+                }
+                .current-menu-item a{
+                    &::after {
+                        content: "";
+                        display: block;
+                        bottom: 24px;
+                        height: 1px;
+                        width: 100%;
+                        background-color: white;
+                        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=78);
+                        opacity: 0.78;
+
+                        transition: background-color 1s;
+                    }
                 }
             }
         }
@@ -1025,5 +1085,11 @@ footer{
     margin-left: 0px;
     margin-bottom: 50px;
   }
+
+  .contact-container{
+    .form form{
+        width: 425px;
+    }
+}
 
 }
