@@ -528,6 +528,54 @@ footer {
   footer .copy .footer-menu {
     display: none; }
 
+/* --- News page ---- */
+.submenu {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); }
+
+#submenu ul {
+  height: 100%;
+  list-style: none;
+  padding-right: 10px; }
+  #submenu ul li {
+    font-family: Raleway, sans-serif;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 0 0 0 25px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.42);
+    padding: 9px 0; }
+    #submenu ul li a {
+      color: white; }
+      #submenu ul li a:hover {
+        color: white; }
+      #submenu ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: 24px;
+        height: 1px;
+        width: 0%;
+        left: 50%;
+        background-color: white;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=78);
+        opacity: 0.78;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+
+.news-text.nine.columns {
+  margin-left: 0px;
+  margin-bottom: 0px; }
+  .news-text.nine.columns p {
+    color: black;
+    font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    padding: 20px;
+    margin-bottom: 0px; }
+  .news-text.nine.columns h2 {
+    padding-top: 10px; }
+
+/* --- End News page ---- */
 /*MEDIA QUERIES */
 /* Larger than mobile */
 /* Tablet (also point when grid becomes active) */

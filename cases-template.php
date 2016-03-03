@@ -57,7 +57,7 @@ if(have_posts()) :
                         ?>
                     </div>
                 </div>
-            </div>
+            </main>
 
 
                 <?php

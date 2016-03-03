@@ -29,6 +29,11 @@ $lightgreen : #97ffe0;
   font-family: OpenSans, sans-serif;
   font-size: 16px;
 }
+@mixin menu-text{
+  color: black;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+}
 @mixin p-text-small{
   color: black;
   font-family: Avenir, sans-serif;
@@ -648,7 +653,60 @@ footer{
     }
 }
 
+/* --- News page ---- */
+.submenu{
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
 
+#submenu ul{
+  height: 100%;
+  list-style: none;
+  padding-right: 10px;
+  li{
+    font-family: Raleway, sans-serif;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 0 0 0 25px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.42);
+    padding: 9px 0;
+    a{
+      color: white;
+      &:hover{
+        color:white;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 24px;
+        height: 1px;
+        width: 0%;
+        left: 50%;
+        background-color: white;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=78);
+        opacity: 0.78;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+      }
+    }
+
+  }
+}
+.news-text.nine.columns{
+  margin-left: 0px;
+  margin-bottom: 0px;
+  p{
+    @include p-text;
+    padding: 20px;
+    margin-bottom: 0px;
+  }
+  h2{
+    padding-top: 10px;
+  }
+}
+/* --- End News page ---- */
 
 
 
