@@ -508,10 +508,27 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    .worker-title{
+
+        p{
+            @include p-text;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.47);
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0px 10px;
+            margin-top: 180px;
+  }
+        a{
+            display: none;
+        }
+
+    }
   }
   .block-over{
     background-color: white;
-    z-index: 11;
+    z-index: 1;
     width: 60%;
     margin: auto;
     padding: 40px;
@@ -523,17 +540,14 @@ header {
     //transition: opacity 0.8s ease;
     display: none;
     @include p-text;
+    p:first-child{
+        display:none;
+    }
+
+
+
   }
-  .worker-title{
-    @include p-text;
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.47);
-    display: inline-block;
-    margin: 0 auto;
-    padding: 0px 10px;
-    margin-top: 180px;
-  }
+
   h3{
     color: white;
     background-color: rgba(0, 0, 0, 0.47);
@@ -628,23 +642,35 @@ h2{
     background: white;
     .contact-form{
         padding: 70px 0;
-        .contact1{
+        .contact{
             @include p-text;
             text-align: center;
-            font-size: 1.7em;
+            img{
+                height:50px;
+                width: 50px;
+                &:first-child{
+                    padding-right: 10px;
+                }
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+
         }
     form{
-        width: 300px;
+        width: 285px;
         text-align: center;
         margin: 0 auto;
-        #submit{
-            background-color:$blue;
-            color:white;
-        }
         input, textarea{
             width: 100%;
             font-family: LANEAR, sans-serif;
 
+        }
+        #submit{
+            background-color:$blue;
+            color:white;
+            width: 25%;
+            padding:0;
         }
         textarea{
             margin-bottom: 5px;
@@ -1130,7 +1156,7 @@ footer{
 
   .contact-container{
     .form form{
-        width: 425px;
+        width: 285px;
     }
 }
 

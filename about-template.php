@@ -9,6 +9,8 @@ $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true
 $thumb_url = $thumb_url_array[0];
 
 
+
+
 if(have_posts()) :
     while (have_posts()) : the_post();
 
@@ -50,19 +52,25 @@ if(have_posts()) :
                 ?>
 
                     <?php
+                    $i = 0;
+                    $j = 0;
+                    $k = 0;
                     foreach ($pages as $page) {
+                        $content = $page->post_content;
+                        $content = apply_filters( 'the_content', $content );
+
                     ?>
 
                     <label for="person">
                     <div class="workers four columns">
-                        <input type="checkbox" id="person">
+                        <input type="checkbox" >
 
-                            <div class ="workers-image" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page->ID), 'large')[0]; ?>);">
+                            <div class ="workers-image" id="person-<?php echo $i++; ?>" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page->ID), 'large')[0]; ?>);">
                             <h3><?php echo $page->post_title; ?></h3>
-                            <p class="worker-title"><?php echo $page->post_content; ?></p>
-                        </div>
-                        <div class="block-over">
-                            <p class="block-over-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel efficitur mi. Nunc vitae aliquet sem. </p>
+                            <span class="worker-title"><?php echo $content; ?>
+                            </span></div>
+                        <div class="block-over" id="block-<?php echo $j++; ?>">
+                                <?php echo $content; ?>
                         </div>
                     </div>
                     </label>
@@ -95,4 +103,3 @@ endif;
 
 get_footer();
 ?>
-
