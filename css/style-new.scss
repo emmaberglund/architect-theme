@@ -539,15 +539,6 @@ header {
     background-color: rgba(0, 0, 0, 0.47);
     font-size: 2em;
   }
-/*
-  input[type=checkbox]:checked ~ .block-over-text {
-    opacity: 1;
-    z-index: 1;
-    transition: opacity 0.8s ease; }
-  input[type=checkbox]:checked ~ .workers-image {
-    transition: opacity 0.8s ease;
-    opacity: 0; }
-  */
 }
 
 .six.columns.text-divider{
@@ -556,19 +547,6 @@ header {
   margin-bottom: 0px;
   margin-top: 0px;
 }
-  /*
-h2{
-  &:last-child{
-    &::before{
-      content: url("../images/goals.png");
-    }
-  }
-  &:first-child {
-    &::before {
-      content: url("../images/gear.png");
-    }
-  }
-}*/
 .about{
   li{
     display: inline-block;
@@ -606,8 +584,6 @@ h2{
   margin-bottom: 10px;
 }
 #header-image-about{
-  //height: 350px;
-  //padding-bottom: 350px;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -759,6 +735,9 @@ footer{
     &:first-child{
       display: none;
     }
+    &:last-child{
+      padding:0px;
+    }
   }
   h2{
     text-align: left;
@@ -791,7 +770,23 @@ footer{
   .four.columns.workers{
     width: 50%;
     margin-bottom: 0px;
-  }
+    h3{
+    border-bottom: 3px solid rgba(0, 0, 0, 0.01);
+    -webkit-transition: border-color 1s ease;
+    -moz-transition: border-color 1s ease;
+    -o-transition: border-color 1s ease;
+    -ms-transition: border-color 1s ease;
+    transition: border-color 1s ease;
+    }
+      &:hover{
+      h3{
+        background-color: rgba(0, 0, 0, 0.80);
+        border-bottom: 3px solid $blue;
+      }
+   }
+
+    }
+
   .three.columns.news,
   .three.columns.project
   {
@@ -901,17 +896,19 @@ footer{
   }
   #submenu ul{
     background: white;
-    li{
-      a{
-        color: black;
-        &:hover{
-          color:black;
-        }
-        &::after {
-          background-color: black;
-        }
-      }
 
+    li a{
+      color:black;
+      border-bottom: 3px solid rgba(0, 0, 0, 0.01);
+      -webkit-transition: border-color 1s ease;
+      -moz-transition: border-color 1s ease;
+      -o-transition: border-color 1s ease;
+      -ms-transition: border-color 1s ease;
+      transition: border-color 1s ease;
+      &:hover{
+        color: black;
+        border-bottom: 3px solid $blue;
+      }
     }
   }
   .four.columns.workers{
@@ -1043,20 +1040,7 @@ footer{
 @media (min-width: 1025px) {
   .four.columns.workers{
     width: 33.333%;
-    h3{
-      border-bottom: 3px solid rgba(0, 0, 0, 0.01);
-      -webkit-transition: border-color 1s ease;
-      -moz-transition: border-color 1s ease;
-      -o-transition: border-color 1s ease;
-      -ms-transition: border-color 1s ease;
-      transition: border-color 1s ease;
-    }
-      &:hover{
-        h3{
-          background-color: rgba(0, 0, 0, 0.80);
-          border-bottom: 3px solid $blue;
-        }
-      }
+
   }
     .header-image{
         height: 730px;
