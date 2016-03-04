@@ -530,8 +530,18 @@ header {
     //transition: opacity 0.8s ease;
     display: none;
     @include p-text;
-    p:first-child{
+
+    p:nth-child(2){
         display:none;
+    }
+    .close{
+        position: absolute;
+        right: 17px;
+        top: 13px;
+        &:hover{
+            color: grey;
+            transition: top 1s;
+        }
     }
 
 

@@ -70,6 +70,7 @@ if(have_posts()) :
                             <span class="worker-title"><?php echo $content; ?>
                             </span></div>
                         <div class="block-over" id="block-<?php echo $j++; ?>">
+                                <span class="close">&#x2613</span>
                                 <?php echo $content; ?>
                         </div>
                     </div>
