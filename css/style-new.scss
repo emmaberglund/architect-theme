@@ -884,19 +884,34 @@ footer{
 /* Larger than tablet */
 @media (min-width: 750px) {
   .nine.columns.news-text{
-    //border-left: 1px solid black;
+    border-left: 1px solid black;
+    padding-left: 30px;
     width: 80%;
+    p{
+      padding-bottom: 20px;
+    }
     p, h2, img{
       padding-left: 0px;
       //margin-bottom: 0px;
+    }
+    .slider{
+      margin: auto;
+      box-shadow: -20px 20px 20px -20px rgba(0, 0, 0, 0.9);
+      margin-bottom: 20px;
+      margin-top: 15px;
+      ul li img{
+        border: 1px solid black;
+      }
+      img{
+      }
     }
   }
   .three.columns.sub{
     width: 20%;
   }
   #submenu ul{
+    margin-top: 20px;
     background: white;
-
     li a{
       color:black;
       border-bottom: 3px solid rgba(0, 0, 0, 0.01);
@@ -1143,5 +1158,8 @@ footer{
         width: 285px;
     }
 }
+  .three.columns.sub{
+    width:15%;
+  }
 
 }
