@@ -67,7 +67,8 @@ if(have_posts()) :
 
                             <div class ="workers-image" id="person-<?php echo $i++; ?>" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page->ID), 'large')[0]; ?>);">
                             <h3><?php echo $page->post_title; ?></h3>
-                            </div>
+                            <span class="worker-title"><?php echo $content; ?>
+                            </span></div>
                         <div class="block-over" id="block-<?php echo $j++; ?>">
                                 <span class="close">&#x2613</span>
                                 <?php echo $content; ?>
