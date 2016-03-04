@@ -501,15 +501,18 @@ header {
     .worker-title{
 
         p{
-    @include p-text;
-      text-align: center;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.47);
-      display: inline-block;
-      margin: 0 auto;
-      padding: 0px 10px;
-      margin-top: 180px;
+            @include p-text;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.47);
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0px 10px;
+            margin-top: 180px;
   }
+        a{
+            display: none;
+        }
 
     }
   }

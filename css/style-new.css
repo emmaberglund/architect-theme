@@ -418,6 +418,8 @@ header {
       margin: 0 auto;
       padding: 0px 10px;
       margin-top: 180px; }
+    .workers .workers-image .worker-title a {
+      display: none; }
   .workers .block-over {
     background-color: white;
     z-index: 1;
