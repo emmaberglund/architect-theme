@@ -175,9 +175,16 @@ header {
   width: 100%;
   height: 100%;
   text-align: center; }
+  .caption h2, .caption .metaslider {
+    display: none; }
   .caption p {
     text-align: center;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    display: none; }
+    .caption p:first-child {
+      display: block; }
+    .caption p:nth-child(2) {
+      display: block; }
 
 .button-div {
   position: relative;
@@ -557,12 +564,8 @@ footer {
     display: none; }
 
 /* --- News page ---- */
-.submenu {
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9); }
-
 #submenu ul {
-  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
   list-style: none;
   padding-right: 10px; }
   #submenu ul li {
@@ -594,17 +597,27 @@ footer {
 .news-text.nine.columns {
   margin-left: 0px;
   margin-bottom: 0px; }
+  .news-text.nine.columns li {
+    margin: 0px; }
   .news-text.nine.columns p {
     color: black;
     font-family: OpenSans, sans-serif;
     font-size: 16px;
+    padding: 5px 20px;
+    margin-bottom: 0px; }
+    .news-text.nine.columns p:first-child {
+      display: none; }
+  .news-text.nine.columns h2 {
+    text-align: left;
     padding: 20px;
     margin-bottom: 0px; }
-  .news-text.nine.columns h2 {
-    padding-top: 10px; }
 
 /* --- End News page ---- */
 /*MEDIA QUERIES */
+@media (min-width: 480px) {
+  .three.columns.sub, .nine.columns.news-text {
+    width: 100%; } }
+
 /* Larger than mobile */
 /* Tablet (also point when grid becomes active) */
 @media (min-width: 550px) {
@@ -674,6 +687,20 @@ footer {
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+  .nine.columns.news-text {
+    width: 80%; }
+    .nine.columns.news-text p, .nine.columns.news-text h2, .nine.columns.news-text img {
+      padding-left: 0px; }
+  .three.columns.sub {
+    width: 20%; }
+  #submenu ul {
+    background: white; }
+    #submenu ul li a {
+      color: black; }
+      #submenu ul li a:hover {
+        color: black; }
+      #submenu ul li a::after {
+        background-color: black; }
   .four.columns.workers {
     width: 50%; }
   .header-image {

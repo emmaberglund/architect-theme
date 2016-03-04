@@ -119,7 +119,10 @@ function our_widgets_init(){
         'id' => 'workwithus',
         'class' => 'workwithus'
     ]);
-
+    register_sidebar([
+        'name' => 'PictureSlider - Arenastaden',
+        'id' => 'ps-arenastaden'
+    ]);
 }
 
 add_action('widgets_init', 'our_widgets_init');
