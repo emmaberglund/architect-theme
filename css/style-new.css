@@ -380,33 +380,6 @@ header {
   */ }
   .workers input {
     display: none; }
-  .workers label {
-    display: block;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    text-indent: -9999px;
-    margin-bottom: 0px; }
-  .workers input[type=checkbox]:checked ~ label::before {
-    background: #222;
-    display: block;
-    width: 20px;
-    height: 2px;
-    transition: all 0.5s ease;
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg); }
-  .workers input[type=checkbox]:checked ~ label::after {
-    display: block;
-    background: #222;
-    width: 20px;
-    height: 2px;
-    right: 33px;
-    top: 44px;
-    transition: all 0.5s ease;
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg); }
   .workers .workers-image {
     text-align: center;
     height: 300px;
@@ -794,6 +767,16 @@ footer {
 @media (min-width: 1025px) {
   .four.columns.workers {
     width: 33.333%; }
+    .four.columns.workers h3 {
+      border-bottom: 3px solid rgba(0, 0, 0, 0.01);
+      -webkit-transition: border-color 1s ease;
+      -moz-transition: border-color 1s ease;
+      -o-transition: border-color 1s ease;
+      -ms-transition: border-color 1s ease;
+      transition: border-color 1s ease; }
+    .four.columns.workers:hover h3 {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-bottom: 3px solid #4E82B9; }
   .header-image {
     height: 730px; }
     .header-image h3 {
