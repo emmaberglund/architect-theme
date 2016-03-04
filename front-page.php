@@ -50,7 +50,7 @@ $pages = get_pages(array('child_of'=> $post->ID ,'sort_order'=> 'asc', 'sort_col
                             <path d="M0,0C0,0,0,50,0,50C0,50,90,70,90,70C90,70,180,50,180,50C180,50,180,0,180,0C180,0,0,0,0,0" style="fill:#ffffff"></path>
                             <desc>Created with Snap</desc><defs></defs></svg>
                         <div class="caption">
-                        <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                         <?php
                         global $more; $more = false;
                         ?>

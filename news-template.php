@@ -20,7 +20,7 @@ if(have_posts()) :
 
     <div class="container">
         <div class="row">
-            <div class="three columns black">
+            <div class="three columns sub">
                 <?php
                 if($post->post_parent)
                     $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
@@ -39,8 +39,7 @@ if(have_posts()) :
             </div>
             <div class="nine columns news-text">
                 <?php wpb_list_child_pages(); ?>
-                <h2><?php the_title();?></h2>
-                <?php the_content();?>
+                <?php the_content();?></p>
             </div>
         </div>
 
