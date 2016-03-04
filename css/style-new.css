@@ -406,8 +406,15 @@ header {
     color: black;
     font-family: OpenSans, sans-serif;
     font-size: 16px; }
-    .workers .block-over p:first-child {
+    .workers .block-over p:nth-child(2) {
       display: none; }
+    .workers .block-over .close {
+      position: absolute;
+      right: 17px;
+      top: 13px; }
+      .workers .block-over .close:hover {
+        color: grey;
+        transition: top 1s; }
   .workers h3 {
     color: white;
     background-color: rgba(0, 0, 0, 0.47);

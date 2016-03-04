@@ -68,10 +68,11 @@ function toggle_workers( event ) {
   var workers = $('.workers').length;
   for(var i = 0; i < workers ; i++){
       if ( target.is( "#person-" + i) ) {
-        $('#block-' + i).fadeIn('slow');
+          $('#block-' + i).fadeToggle('slow');
+
       }
-      else if(target.is("#block-" + i) || target.is("#block-" + i + " p")){
-          $("#block-" + i).fadeOut('slow');
+      else if(target.is("#block-" + i) || target.is("#block-" + i + " p") || target.is("#block-" + i + " span")){
+          $("#block-" + i).fadeToggle('slow');
       }
   }
 }
