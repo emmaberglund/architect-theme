@@ -19,7 +19,7 @@ get_header();
                 </div>
             </div>
             <div class="row contact-info contact-form">
-                <div class="four columns contact1">
+                <div class="four columns contact">
                     <?php dynamic_sidebar('Contact 1'); ?>
                 </div>
                 <div class="four columns form">
@@ -43,7 +43,7 @@ get_header();
                             <input type="submit" name="submit" id="submit" value="Skicka">
                         </form>
                     </div>
-                    <div class="four columns contact1">
+                    <div class="four columns contact">
                         <?php dynamic_sidebar('Contact 2'); ?>
                     </div>
                 </div>

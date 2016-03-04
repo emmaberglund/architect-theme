@@ -70,12 +70,13 @@ function toggle_workers( event ) {
       if ( target.is( "#person-" + i) ) {
         $('#block-' + i).fadeIn('slow');
       }
-      else if(target.is("#block-" + i) || target.is("#block-over-text-" + i)){
+      else if(target.is("#block-" + i) || target.is("#block-" + i + " p")){
           $("#block-" + i).fadeOut('slow');
       }
   }
 }
 $( ".workers-image" ).click( toggle_workers );
+$( ".worker-title" ).click( toggle_workers );
 $( ".block-over" ).click( toggle_workers );
 
 

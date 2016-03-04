@@ -498,6 +498,20 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    .worker-title{
+
+        p{
+    @include p-text;
+      text-align: center;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.47);
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0px 10px;
+      margin-top: 180px;
+  }
+
+    }
   }
   .block-over{
     background-color: white;
@@ -513,17 +527,14 @@ header {
     //transition: opacity 0.8s ease;
     display: none;
     @include p-text;
+    p:first-child{
+        display:none;
+    }
+
+
+
   }
-  .worker-title{
-    @include p-text;
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.47);
-    display: inline-block;
-    margin: 0 auto;
-    padding: 0px 10px;
-    margin-top: 180px;
-  }
+
   h3{
     color: white;
     background-color: rgba(0, 0, 0, 0.47);
@@ -618,9 +629,19 @@ h2{
     background: white;
     .contact-form{
         padding: 70px 0;
-        .contact1{
+        .contact{
             @include p-text;
             text-align: center;
+            img{
+                height:50px;
+                width: 50px;
+                &:first-child{
+                    padding-right: 10px;
+                }
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
 
         }
     form{
