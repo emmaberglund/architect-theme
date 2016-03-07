@@ -187,19 +187,28 @@ header {
       display: block; }
 
 .button-div {
-  position: relative;
-  width: 100%; }
+  position: absolute;
+  text-align: center;
+  left: 0;
+  bottom: 20%;
+  width: 100%;
+  z-index: 12; }
   .button-div .view-button {
-    position: absolute;
-    bottom: 60px;
-    left: 29%;
-    background: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     color: black;
     border: 1px solid black;
-    display: inline-block; }
+    display: inline-block;
+    margin: 0 auto; }
+    .button-div .view-button:hover {
+      border: 1px solid black;
+      opacity: 1;
+      color: black; }
 
 .news-container {
-  margin: 0px 30px; }
+  background: white;
+  width: 100%; }
+  .news-container .row {
+    padding: 0 5%; }
   .news-container svg {
     position: absolute;
     top: -1px;
@@ -513,6 +522,16 @@ footer {
   text-align: center;
   font-family: OpenSans, sans-serif;
   font-size: 1.1em; }
+  footer .footer1 {
+    position: relative; }
+    footer .footer1 .overlay {
+      background: transparent;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 350px;
+      margin-top: -350px;
+      z-index: 20; }
   footer li {
     list-style: none;
     margin-bottom: 0; }
@@ -531,10 +550,12 @@ footer {
         padding-right: 10px; }
       footer .footer .social img:hover {
         opacity: 0.6; }
-  footer .copy p {
-    margin: 0; }
-  footer .copy .footer-menu {
-    display: none; }
+  footer .copy {
+    background: rgba(255, 255, 255, 0.9); }
+    footer .copy p {
+      margin: 0; }
+    footer .copy .footer-menu {
+      display: none; }
 
 /* --- News page ---- */
 #submenu ul {
@@ -653,16 +674,21 @@ footer {
       opacity: 1;
       transition: opacity 0.5s; }
   .button-div {
-    position: relative;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    bottom: 20%;
     width: 100%; }
     .button-div .view-button {
-      position: absolute;
-      bottom: 60px;
-      left: 34%;
       background: rgba(255, 255, 255, 0.6);
       color: black;
       border: 1px solid black;
-      display: inline-block; }
+      display: inline-block;
+      margin: 0 auto; }
+      .button-div .view-button:hover {
+        border: 1px solid black;
+        opacity: 1;
+        color: black; }
   .contact-container .six.columns {
     margin-left: 0; }
   .contact-container .contact-intro {
@@ -827,19 +853,21 @@ footer {
   header #menu ul li {
     padding: 27px 20px; }
   .button-div {
-    position: relative;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    bottom: 20%;
     width: 100%; }
     .button-div .view-button {
-      position: absolute;
-      bottom: 60px;
-      left: 29%;
       background: rgba(255, 255, 255, 0.6);
-      color: black;
+      color: rgba(0, 0, 0, 0.73);
       border: 1px solid black;
       display: none;
       transition: all ease-in-out; }
       .button-div .view-button:hover {
-        border: 1px solid black; }
+        border: 1px solid black;
+        opacity: 1;
+        color: black; }
   .project {
     margin-top: 70px;
     margin-bottom: 70px; }

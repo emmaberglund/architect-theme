@@ -254,21 +254,37 @@ header {
 
 }
 
-.button-div{
-  position: relative;
-  width: 100%;
-  .view-button{
-    position: absolute;
-    bottom:60px;
-    left:29%;
-    background: rgba(white, 0.6);
-    color:black;
-    border: 1px solid black;
-    display: inline-block;
-  }
-}
+
+    .button-div{
+        position: absolute;
+        text-align: center;
+        left: 0;
+        bottom: 20%;
+        width: 100%;
+        z-index: 12;
+        .view-button{
+          background-color: rgba(white, 0.6);
+          color: black;
+          border: 1px solid black;
+          display: inline-block;
+          margin: 0 auto;
+          &:hover{
+             border: 1px solid black;
+             opacity: 1;
+             color: black;
+          }
+        }
+    }
+
+
+
+
 .news-container{
-  margin: 0px 30px;
+  background: white;
+  width: 100%;
+  .row{
+      padding: 0 5%;
+  }
   svg{
     position: absolute;
     top: -1px;
@@ -651,6 +667,19 @@ footer{
     text-align: center;
     font-family: OpenSans, sans-serif;
     font-size: 1.1em;
+    .footer1{
+        position: relative;
+        .overlay {
+            background: transparent;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 350px;
+            margin-top: -350px;
+            z-index: 20;
+       }
+    }
+
     li{
         list-style: none;
         margin-bottom: 0;
@@ -659,6 +688,7 @@ footer{
         background-color: rgba(0, 0, 0, 0.9);
         color: white;
         padding: 10% 10% 5%;
+
         p, a{
             color: white;
         }
@@ -677,6 +707,7 @@ footer{
         }
     }
     .copy{
+        background: rgba(255, 255, 255, 0.9);
         p{
             margin: 0;
         }
@@ -855,16 +886,22 @@ footer{
  }
 
   .button-div{
-    position: relative;
-    width: 100%;
-    .view-button{
       position: absolute;
-      bottom:60px;
-      left:34%;
+      text-align: center;
+      left: 0;
+      bottom: 20%;
+      width: 100%;
+    .view-button{
       background: rgba(white, 0.6);
       color:black;
       border: 1px solid black;
       display: inline-block;
+      margin: 0 auto;
+      &:hover{
+         border: 1px solid black;
+         opacity: 1;
+         color: black;
+      }
     }
   }
   .contact-container{
@@ -1126,19 +1163,22 @@ footer{
 
   }
   .button-div{
-    position: relative;
-    width: 100%;
-    .view-button{
       position: absolute;
-      bottom:60px;
-      left:29%;
+      text-align: center;
+      left: 0;
+      bottom: 20%;
+      width: 100%;
+    .view-button{
       background: rgba(white, 0.6);
-      color:black;
+      color: rgba(0, 0, 0, 0.73);
       border: 1px solid black;
       display: none;
       transition: all ease-in-out;
       &:hover{
-        border: 1px solid black;
+             border: 1px solid black;
+             opacity: 1;
+             color: black;
+
       }
     }
   }
