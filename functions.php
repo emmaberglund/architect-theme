@@ -63,21 +63,8 @@ function our_widgets_init(){
         'id' => 'emailphone'
     ]);
     register_sidebar([
-        'name' => 'Footer3',
-        'id' => 'footer3'
-    ]);
-    register_sidebar([
         'name' => 'FooterMap',
         'id' => 'footermap'
-    ]);
-    register_sidebar([
-        'name' => 'Contact Map',
-        'id' => 'contactmap'
-    ]);
-    register_sidebar([
-        'name' => 'IntroductionFrontPage',
-        'id' => 'introductionfrontpage',
-        'class' => 'introduction'
     ]);
     register_sidebar([
         'name' => 'Social Media',
@@ -118,10 +105,6 @@ function our_widgets_init(){
         'name' => 'Work with Us',
         'id' => 'workwithus',
         'class' => 'workwithus'
-    ]);
-    register_sidebar([
-        'name' => 'PictureSlider - Arenastaden',
-        'id' => 'ps-arenastaden'
     ]);
 }
 
