@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Projekt
+Template Name: Project
 */
 get_header();
 
@@ -13,13 +13,37 @@ if(have_posts()) :
     while (have_posts()) : the_post();
 
         ?>
+        <div class="header-image-page" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->post_parent), 'header-image-page')[0]; ?>);">
+
+        </div>
         <main>
-            <div class="container services">
-                <div class="row below-header">
-                    <div class="twelve columns">
-                        <h2 class="header-text"><?php the_content();?></h2>
+
+            <div class="container">
+                <div class="row">
+                    <div class="three columns sub">
+                        <?php
+                        if($post->post_parent)
+                            $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+                        else
+                            $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+                        if ($children) { ?>
+
+                            <!-- Sub Menu -->
+                            <div class="submenu" id="submenu">
+                                <ul>
+                                    <?php echo $children; ?>
+                                </ul>
+                            </div> <!-- / Sub Menu -->
+
+                        <?php } ?>
+                    </div>
+                    <div class="nine columns news-text">
+                        <?php wpb_list_child_pages(); ?>
+                        <?php the_content();?></p>
                     </div>
                 </div>
+
+
 
                 <?php
 
@@ -31,16 +55,6 @@ if(have_posts()) :
                     <?php
                     foreach ($pages as $page) {
                     ?>
-
-
-                    <div class="service four columns">
-                        <div class ="service-img" style="background-image:url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($page->ID), 'medium')[0]; ?>);">
-                        </div>
-                        <h2><?php echo $page->post_title; ?></h2>
-                        <p><?php echo $page->post_content; ?></p>
-                    </div>
-
-
 
                     <?php if(1==2) {?>
                 </div>
