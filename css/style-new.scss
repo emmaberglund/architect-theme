@@ -329,6 +329,9 @@ header {
   h3,h2{
     display: none;
   }
+  p{
+     opacity: 0.7;
+  }
 }
 .project-icon{
   img {
@@ -391,6 +394,7 @@ header {
 
 /* ---- Front Page CASES ---- */
 .cases-container{
+        background-color: white;
     h2{
         margin-top:20px;
     }
