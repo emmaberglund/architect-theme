@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Project
+Template Name: Projekt
 */
 get_header();
 
