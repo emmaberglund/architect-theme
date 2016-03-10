@@ -32,7 +32,7 @@ get_header();
                     if($_POST['message']=='') { $flag=0; echo "Skriv ett meddelande"; }
                     if ( empty($_POST) ) { print 'Tyvärr gick ditt meddelande inte att skicka.'; exit; }
                     else {
-                        if($flag==1) {wp_mail(get_option("admin_email"),trim($_POST[yourname])." sent you a message from ".get_option("blogname"),stripslashes(trim($_POST[message])),"From: ".trim($_POST[yourname])." <".trim($_POST[email]).">rnReply-To:".trim($_POST[email])); echo "Ditt meddelande har skickats!"; } } }
+                        if($flag==1) {wp_mail(get_option('admin_email'),trim($_POST[yourname])." sent you a message from ".get_option("blogname"),stripslashes(trim($_POST[message])),"From: ".trim($_POST[yourname])." <".trim($_POST[email]).">rnReply-To:".trim($_POST[email])); echo "Ditt meddelande har skickats!"; } } }
                         ?>
 
 

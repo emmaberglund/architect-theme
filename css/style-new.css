@@ -291,7 +291,7 @@ header {
     color: #EAEAEA;
     padding: 20px 40px 20px 40px; }
   .text-divider2 h2 {
-    font-size: 4em;
+    font-size: 2em;
     color: white;
     margin-bottom: 0px;
     padding-top: 15px; }
@@ -490,6 +490,8 @@ header {
 /* ---- Contact Page ---- */
 .contact-container {
   background: white; }
+  .contact-container h2 {
+    font-size: 2em; }
   .contact-container .contact-form {
     padding: 70px 0; }
     .contact-container .contact-form .contact {
